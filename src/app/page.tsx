@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function Home() {
   return (
     <main className="mx-auto flex min-h-screen max-w-2xl flex-col items-center justify-center gap-8 px-6 py-16 text-center">
@@ -15,12 +13,12 @@ export default function Home() {
         No app downloads. Live in 24 hours.
       </p>
       <div className="flex flex-col items-center gap-3 sm:flex-row">
-        <Link
-          href="/demo"
+        <a
+          href="https://somilsharma2000.github.io/gym-os/"
           className="w-full rounded-xl bg-bp px-6 py-3 text-sm font-semibold text-white hover:opacity-90 sm:w-auto"
         >
-          See How It Looks →
-        </Link>
+          Explore Gym OS →
+        </a>
         <a
           href="https://wa.me/917737077479?text=Hi!%20I%20run%20a%20gym%20and%20want%20Gym%20OS%20for%20my%20gym."
           className="w-full rounded-xl border border-navy-border bg-navy-surface px-6 py-3 text-sm font-semibold hover:bg-navy-raised sm:w-auto"
