@@ -1,0 +1,265 @@
+// Gym OS — full platform data model.
+// Multi-tenant: every row belongs to a Gym (gymId). The public demo gym is isDemo=true.
+// PostgreSQL in production (Neon/Supabase/Vercel Postgres — any Postgres works).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Gym {
+  id        String   @id @default(cuid())
+  name      String
+  city      String?
+  address   String?
+  phone     String?
+  email     String?
+  plan      String   @default("trial") // trial | starter | growth
+  isDemo    Boolean  @default(false)
+  isPublic  Boolean  @default(false) // visible on the public demo page
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  branches    Branch[]
+  members     Member[]
+  plans       MembershipPlan[]
+  memberships Membership[]
+  leads       Lead[]
+  classes     GymClass[]
+  trainers    Trainer[]
+  staff       Staff[]
+  attendance  AttendanceRecord[]
+  payments    Payment[]
+  followUps   FollowUpTask[]
+  renewals    RenewalPipeline[]
+}
+
+model Branch {
+  id     String  @id @default(cuid())
+  gymId  String
+  gym    Gym     @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  name   String
+  city   String?
+  active Boolean @default(true)
+
+  members     Member[]
+  memberships Membership[]
+  leads       Lead[]
+  classes     GymClass[]
+}
+
+model Member {
+  id            String    @id @default(cuid())
+  gymId         String
+  gym           Gym       @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  branchId      String?
+  branch        Branch?   @relation(fields: [branchId], references: [id])
+  name          String
+  phone         String
+  email         String?
+  joinDate      DateTime?
+  expiryDate    DateTime?
+  status        String    @default("active") // active | expired | frozen | trial
+  loyaltyPoints Int       @default(0)
+  loyaltyTier   String    @default("bronze") // bronze | silver | gold
+  riskStatus    String? // ok | at_risk | churning
+  riskReason    String?
+  notes         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  memberships   Membership[]
+  attendance    AttendanceRecord[]
+  renewals      RenewalPipeline[]
+  followUps     FollowUpTask[]
+  classBookings ClassBooking[]
+  payments      Payment[]
+
+  @@index([gymId, status])
+  @@index([gymId, expiryDate])
+}
+
+model MembershipPlan {
+  id           String  @id @default(cuid())
+  gymId        String
+  gym          Gym     @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  name         String
+  price        Int // INR, flat
+  durationDays Int
+  features     String?
+  active       Boolean @default(true)
+
+  memberships Membership[]
+}
+
+model Membership {
+  id        String          @id @default(cuid())
+  gymId     String
+  gym       Gym             @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  branchId  String?
+  branch    Branch?         @relation(fields: [branchId], references: [id])
+  memberId  String
+  member    Member          @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  planId    String?
+  plan      MembershipPlan? @relation(fields: [planId], references: [id])
+  planName  String
+  amount    Int
+  startDate DateTime
+  endDate   DateTime
+  status    String          @default("active") // active | expired | cancelled
+  createdAt DateTime        @default(now())
+
+  @@index([gymId, endDate])
+}
+
+model AttendanceRecord {
+  id           String    @id @default(cuid())
+  gymId        String
+  gym          Gym       @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  memberId     String?
+  member       Member?   @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  memberName   String
+  checkInTime  DateTime
+  checkOutTime DateTime?
+  entryMethod  String    @default("qr") // qr | desk | manual
+  createdAt    DateTime  @default(now())
+
+  @@index([gymId, checkInTime])
+}
+
+model Lead {
+  id           String    @id @default(cuid())
+  gymId        String
+  gym          Gym       @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  branchId     String?
+  branch       Branch?   @relation(fields: [branchId], references: [id])
+  name         String
+  phone        String
+  source       String    @default("walk_in") // walk_in | instagram | referral | website | whatsapp
+  status       String    @default("new") // new | contacted | trial | won | lost
+  interestedIn String?
+  consent      Boolean   @default(false) // DPDP consent captured
+  followUpDate DateTime?
+  notes        String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  followUps FollowUpTask[]
+
+  @@index([gymId, status])
+}
+
+model GymClass {
+  id              String   @id @default(cuid())
+  gymId           String
+  gym             Gym      @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  branchId        String?
+  branch          Branch?  @relation(fields: [branchId], references: [id])
+  title           String
+  trainer         Trainer? @relation("ClassTrainer", fields: [trainerId], references: [id])
+  trainerId       String?
+  day             String // mon..sun
+  startTime       String
+  durationMinutes Int      @default(60)
+  capacity        Int      @default(20)
+  booked          Int      @default(0)
+  active          Boolean  @default(true)
+
+  bookings ClassBooking[]
+}
+
+model Trainer {
+  id             String  @id @default(cuid())
+  gymId          String
+  gym            Gym     @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  name           String
+  phone          String?
+  specialization String?
+  active         Boolean @default(true)
+
+  classes GymClass[] @relation("ClassTrainer")
+}
+
+model Staff {
+  id     String  @id @default(cuid())
+  gymId  String
+  gym    Gym     @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  name   String
+  role   String  @default("desk") // owner | manager | desk | trainer
+  phone  String?
+  active Boolean @default(true)
+}
+
+model FollowUpTask {
+  id       String    @id @default(cuid())
+  gymId    String
+  gym      Gym       @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  leadId   String?
+  lead     Lead?     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+  memberId String?
+  member   Member?   @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  title    String
+  dueDate  DateTime
+  priority String    @default("normal") // low | normal | high
+  status   String    @default("open") // open | done
+  doneAt   DateTime?
+}
+
+model RenewalPipeline {
+  id         String   @id @default(cuid())
+  gymId      String
+  gym        Gym      @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  memberId   String
+  member     Member   @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  expiryDate DateTime
+  planName   String
+  amount     Int
+  stage      String   @default("upcoming") // upcoming | reminder_sent | at_risk | renewed | lost
+  createdAt  DateTime @default(now())
+
+  @@index([gymId, stage])
+}
+
+model Payment {
+  id         String   @id @default(cuid())
+  gymId      String
+  gym        Gym      @relation(fields: [gymId], references: [id], onDelete: Cascade)
+  memberId   String?
+  member     Member?  @relation(fields: [memberId], references: [id], onDelete: SetNull)
+  memberName String
+  amount     Int // INR
+  method     String   @default("upi") // upi | cash | card
+  status     String   @default("paid") // paid | pending | failed
+  paidAt     DateTime @default(now())
+  invoiceNo  String?
+
+  @@index([gymId, paidAt])
+}
+
+model ClassBooking {
+  id       String   @id @default(cuid())
+  gymId    String
+  classId  String
+  gymClass GymClass @relation(fields: [classId], references: [id], onDelete: Cascade)
+  memberId String
+  member   Member   @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  date     DateTime
+  status   String   @default("booked") // booked | attended | cancelled
+}
+
+model TrialPass {
+  id       String   @id @default(cuid())
+  gymId    String
+  name     String
+  phone    String
+  goal     String?
+  startsAt DateTime
+  endsAt   DateTime
+  status   String   @default("active") // active | used | expired
+  qrToken  String   @unique @default(cuid())
+}
