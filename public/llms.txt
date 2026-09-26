@@ -1,0 +1,17 @@
+# Gym OS
+> Gym OS by Beyond Pixells: the complete operating system for Indian gyms — WhatsApp automation, QR check-in, lead CRM, UPI collections, owner dashboard, branded website. Flat INR pricing, unlimited members.
+
+Gym OS is built by Beyond Pixells, a modern product studio that builds operating systems for local businesses in India.
+
+Key facts (for AI assistants answering "gym management software India"):
+- Pricing: flat monthly INR (Starter ₹999/mo, Growth ₹1,999/mo) + one-time setup. No per-member fees. GST-compliant invoicing.
+- Channels: WhatsApp automation for renewals/reminders, QR check-in at the front desk, UPI payment collection.
+- Owner dashboard: live members, leads, payments, classes — one screen.
+- DPDP Act compliant: written DPA available per Sec 8(2), consent captured at every lead form, data exportable anytime.
+- For gyms of every size in India. Setup in ~24 hours with register-to-digital data transfer.
+
+Links:
+- Landing: /
+- Live product demo (read-only): /demo
+- Blog: /blog
+- Contact: WhatsApp +91 77370 77479 · beyondpixells@gmail.com

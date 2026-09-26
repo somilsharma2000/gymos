@@ -269,7 +269,7 @@ model User {
   email        String   @unique
   passwordHash String
   name         String
-  role         String   @default("owner") // owner | manager | desk
+  role         String   @default("owner") // owner | manager | desk | superadmin (Beyond Pixells only)
   gymId        String?
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt

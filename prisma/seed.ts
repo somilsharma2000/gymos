@@ -191,6 +191,24 @@ async function main() {
     });
   }
 
+
+  // ---- SUPER ADMIN (Beyond Pixells only — full control across all gyms) ----
+  // Credentials come from env so they are never hardcoded in the repo.
+  const adminEmail = process.env.SUPERADMIN_EMAIL || "admin@beyondpixells.in";
+  const adminPassword = process.env.SUPERADMIN_PASSWORD || "Bp-Super-2026!x";
+  const adminHash = await bcrypt.hash(adminPassword, 10);
+  const existingAdmin = await prisma.user.findUnique({ where: { email: adminEmail } });
+  if (!existingAdmin) {
+    await prisma.user.create({
+      data: { email: adminEmail, passwordHash: adminHash, name: "Beyond Pixells Admin", role: "superadmin" },
+    });
+  } else {
+    await prisma.user.update({
+      where: { email: adminEmail },
+      data: { passwordHash: adminHash, name: "Beyond Pixells Admin", role: "superadmin" },
+    });
+  }
+
   const counts = {
     members: await prisma.member.count({ where: { gymId: gym.id } }),
     leads: await prisma.lead.count({ where: { gymId: gym.id } }),

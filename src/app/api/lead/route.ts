@@ -7,9 +7,25 @@ import { prisma } from "@/lib/prisma";
 // app can show them in the Leads screen.
 export const dynamic = "force-dynamic";
 
+// Basic abuse protection: max 5 submissions per IP per 10 minutes.
+const hits = new Map<string, { n: number; reset: number }>();
+function rateLimited(ip: string): boolean {
+  const now = Date.now();
+  const h = hits.get(ip);
+  if (!h || now > h.reset) {
+    hits.set(ip, { n: 1, reset: now + 10 * 60 * 1000 });
+    return false;
+  }
+  h.n += 1;
+  return h.n > 5;
+}
+
 const INBOX_GYM_NAME = "Website Leads (Beyond Pixells)";
 
 export async function POST(req: Request) {
+  if (rateLimited(req.headers.get("x-forwarded-for") ?? "local")) {
+    return NextResponse.json({ ok: false, error: "rate_limited" }, { status: 429 });
+  }
   try {
     const body = await req.json().catch(() => ({}));
     const name = String(body.name ?? "").trim();
