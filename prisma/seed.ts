@@ -3,6 +3,7 @@
 // Deterministic, safe to re-run (clears the demo gym only).
 
 import { PrismaClient } from "@prisma/client";
+import bcrypt from "bcryptjs";
 
 const prisma = new PrismaClient();
 
@@ -172,6 +173,21 @@ async function main() {
         paidAt: new Date(now - i * day),
         invoiceNo: `INV-${1000 + i}`,
       },
+    });
+  }
+
+  // owner login for the demo gym (owner@pulse.demo / demo1234)
+  const ownerEmail = "owner@pulse.demo";
+  const passwordHash = await bcrypt.hash("demo1234", 10);
+  const existingOwner = await prisma.user.findUnique({ where: { email: ownerEmail } });
+  if (!existingOwner) {
+    await prisma.user.create({
+      data: { email: ownerEmail, passwordHash, name: "PULSE Owner", role: "owner", gymId: gym.id },
+    });
+  } else {
+    await prisma.user.update({
+      where: { email: ownerEmail },
+      data: { passwordHash, name: "PULSE Owner", role: "owner", gymId: gym.id },
     });
   }
 

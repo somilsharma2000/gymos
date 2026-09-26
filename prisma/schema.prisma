@@ -263,3 +263,14 @@ model TrialPass {
   status   String   @default("active") // active | used | expired
   qrToken  String   @unique @default(cuid())
 }
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         String   @default("owner") // owner | manager | desk
+  gymId        String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

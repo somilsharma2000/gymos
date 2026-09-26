@@ -15,7 +15,8 @@ Product of **Beyond Pixells**.
 | `/` | Product front door — hero + demo CTA |
 | `/demo` | **Public live demo** — the real owner dashboard UI, read-only, seeded demo gym (PULSE Fitness) |
 | `/api/demo/overview` | Backend JSON API serving the demo overview |
-| `/login` | Owner login (arrives with the auth phase) |
+| `/login` | Owner login (email + password, Auth.js) |
+| `/dashboard` `/members` `/leads` `/payments` `/classes` | **Owner app** — protected, live CRUD against PostgreSQL |
 
 ## Run locally
 
@@ -26,6 +27,10 @@ npm run dev
 ```
 
 No database needed to view the demo (it serves the seeded dataset).
+
+**Owner app:** email/password auth via Auth.js (NextAuth). Demo owner created by the seed:
+`owner@pulse.demo` / `demo1234` — change it before real use. In production set
+`NEXTAUTH_SECRET` (random string) and `NEXTAUTH_URL` (your deployed URL) as Vercel env vars.
 To attach the real database:
 
 ```bash

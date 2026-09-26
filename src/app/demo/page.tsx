@@ -1,8 +1,6 @@
 import Link from "next/link";
-import {
-  demoGym, demoStats, demoMembers, demoLeads, demoPayments,
-  demoClasses, automationFeed, revenueTrend,
-} from "@/lib/demo-data";
+import { demoPayments, demoClasses, automationFeed, revenueTrend } from "@/lib/demo-data";
+import { getOverview } from "@/lib/gym-data";
 
 const inr = (n: number) => "₹" + n.toLocaleString("en-IN");
 
@@ -28,7 +26,8 @@ function Badge({ status }: { status: string }) {
   return <span className={`rounded-full px-2 py-0.5 text-[11px] font-medium ${cls}`}>{status.replace(/_/g, " ")}</span>;
 }
 
-export default function DemoPage() {
+export default async function DemoPage() {
+  const { data: ov, live } = await getOverview();
   const maxRev = Math.max(...revenueTrend);
   return (
     <main className="min-h-screen">
@@ -55,7 +54,7 @@ export default function DemoPage() {
       <div className="border-b border-navy-border bg-navy-surface">
         <p className="mx-auto max-w-6xl px-4 py-2 text-center text-[11px] text-ink-dim">
           <span className="mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-amber align-middle" />
-          Live product demo · read-only · seeded demo data of {demoGym.name}, {demoGym.city}
+          Live product demo · read-only · {ov.gym.name}, {ov.gym.city} · {live ? "live database" : "seeded dataset"}
         </p>
       </div>
 
@@ -64,7 +63,7 @@ export default function DemoPage() {
         <section className="flex flex-wrap items-end justify-between gap-3">
           <div>
             <h1 className="text-xl font-semibold sm:text-2xl">Owner Dashboard</h1>
-            <p className="text-sm text-ink-dim">{demoGym.name} · {demoGym.city} · {demoGym.plan} plan</p>
+            <p className="text-sm text-ink-dim">{ov.gym.name} · {ov.gym.city} · {ov.gym.plan} plan</p>
           </div>
           <div className="flex items-center gap-2 text-xs text-ink-dim">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-success" /> All systems running
@@ -73,10 +72,10 @@ export default function DemoPage() {
 
         {/* KPIs */}
         <section className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-          <Kpi label="Active members" value={demoStats.activeMembers.toString()} sub={`+${demoStats.newLeads} leads in pipeline`} />
-          <Kpi label="Revenue collected" value={inr(demoStats.revenue)} sub="₹9.2L this quarter" />
-          <Kpi label="Check-ins today" value={demoStats.checkInsToday.toString()} sub="via QR — no queues" />
-          <Kpi label="Expiring this week" value={demoStats.expiringSoon.toString()} sub="WhatsApp reminders queued" />
+          <Kpi label="Active members" value={ov.stats.activeMembers.toString()} sub={`+${ov.stats.newLeads} leads in pipeline`} />
+          <Kpi label="Revenue collected" value={inr(ov.stats.revenue)} sub="₹9.2L this quarter" />
+          <Kpi label="Check-ins today" value={ov.stats.checkInsToday.toString()} sub="via QR — no queues" />
+          <Kpi label="Expiring this week" value={ov.stats.expiringSoon.toString()} sub="WhatsApp reminders queued" />
         </section>
 
         {/* revenue trend */}
@@ -100,10 +99,10 @@ export default function DemoPage() {
           <section className="overflow-hidden rounded-xl border border-navy-border bg-navy-surface">
             <div className="flex items-center justify-between border-b border-navy-border px-4 py-3">
               <h2 className="text-sm font-semibold">Members</h2>
-              <span className="text-xs text-ink-dim">{demoStats.members} total</span>
+              <span className="text-xs text-ink-dim">{ov.stats.members} total</span>
             </div>
             <ul>
-              {demoMembers.map((m) => (
+              {ov.members.map((m) => (
                 <li key={m.name} className="flex items-center justify-between gap-3 border-b border-navy-border/60 px-4 py-2.5 last:border-0">
                   <div className="min-w-0">
                     <p className="truncate text-sm font-medium">{m.name}</p>
@@ -122,10 +121,10 @@ export default function DemoPage() {
           <section className="overflow-hidden rounded-xl border border-navy-border bg-navy-surface">
             <div className="flex items-center justify-between border-b border-navy-border px-4 py-3">
               <h2 className="text-sm font-semibold">Lead pipeline</h2>
-              <span className="text-xs text-ink-dim">{demoStats.leads} total · {demoStats.wonLeads} won</span>
+              <span className="text-xs text-ink-dim">{ov.stats.leads} total · {ov.stats.wonLeads} won</span>
             </div>
             <ul>
-              {demoLeads.map((l) => (
+              {ov.leads.map((l) => (
                 <li key={l.name} className="flex items-center justify-between gap-3 border-b border-navy-border/60 px-4 py-2.5 last:border-0">
                   <div className="min-w-0">
                     <p className="truncate text-sm font-medium">{l.name}</p>
@@ -160,7 +159,7 @@ export default function DemoPage() {
           <section className="overflow-hidden rounded-xl border border-navy-border bg-navy-surface">
             <div className="flex items-center justify-between border-b border-navy-border px-4 py-3">
               <h2 className="text-sm font-semibold">Classes today</h2>
-              <span className="text-xs text-ink-dim">{demoStats.classes} weekly · {demoStats.trainers} trainers</span>
+              <span className="text-xs text-ink-dim">{ov.stats.classes} weekly · {ov.stats.trainers} trainers</span>
             </div>
             <ul>
               {demoClasses.map((c) => (

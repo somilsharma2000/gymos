@@ -33,12 +33,17 @@ mixed with real data.
 - JSON API at /api/demo/overview
 - Deployable to Vercel with zero external services
 
-### Phase 2 — real backend live
-- Attach DATABASE_URL (Neon free tier)
-- Owner auth (email+password via Auth.js, session cookie; WhatsApp OTP login later)
-- Owner dashboard wired to live Postgres CRUD (members, payments, leads, classes)
-- QR check-in: member QR code → validate → AttendanceRecord
-- Client gym websites (public marketing page per gym, generated from Gym record)
+### Phase 2 — real backend live (SHIPPED 27 Sep 2026)
+- ✅ DATABASE_URL (verified locally against PostgreSQL 15)
+- ✅ Owner auth (email+password via Auth.js, session cookie; WhatsApp OTP login later)
+- ✅ Owner app at /dashboard /members /leads /payments /classes — protected by middleware
+- ✅ Live CRUD via server actions: add member (auto membership + payment), lead status
+      (won → auto member conversion), record payment
+- ✅ Public /demo reads the live database when attached (badge shows "live database"),
+      falls back to the bundled seed dataset with no DATABASE_URL
+- E2E verified: login → KPIs → add member → move lead to won → record payment → 0 JS errors
+- Next: QR check-in: member QR code → validate → AttendanceRecord
+- Next: client gym websites (public marketing page per gym, generated from Gym record)
 
 ### Phase 3 — automation engine
 - Renewal pipeline: daily cron (Vercel Cron) → RenewalPipeline rows → WhatsApp
