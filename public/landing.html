@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A0E29">
+<title>Gym OS — The Complete Operating System for Indian Gyms</title>
+<meta name="description" content="Gym OS: gym management for Indian gyms — WhatsApp automation, QR check-in, lead CRM, UPI collections, owner dashboard and a branded website. Flat pricing.">
+<meta property="og:title" content="Gym OS — Run Your Gym on One System">
+<meta property="og:description" content="WhatsApp reminders, QR check-in, lead CRM, UPI collection, owner dashboard + a branded website. Built for Indian gyms. Flat pricing, unlimited members.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://somilsharma2000.github.io/gym-os/og-image.png">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://somilsharma2000.github.io/beyond-pixells/assets/bp-design-system.css">
+<link rel="stylesheet" href="https://somilsharma2000.github.io/beyond-pixells/assets/bp-obsidian-veins.css">
+<link rel="stylesheet" href="https://somilsharma2000.github.io/beyond-pixells/assets/bp-effects-kit.css">
+<link rel="canonical" href="https://somilsharma2000.github.io/gym-os/">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+/* v7.1 APP PARITY (26 Sep 2026): tokens mirror the live Gym OS app
+   — navy canvas, slate strokes, royal blue accent. */
+:root{
+  --bg:#0A0E29;--bg-soft:#0F1425;--card:#141833;--stroke-soft:rgba(148,163,184,.14);--stroke:rgba(148,163,184,.26);
+  --grad:linear-gradient(135deg,#338CFF 0%,#0066FF 55%,#0052CC 100%);
+  --crimson:#8BABFA;--amber:#B5CAFD;--cyan:#67E8F9;--green:#34D399;
+  --text:#F2F5FB;--muted:#94A3B8;--dim:#94A3B8;
+  --gloss:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,0) 45%);
+  --shadow-sm:0 12px 34px rgba(0,0,0,.4);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;letter-spacing:-.03em;line-height:1.15;color:#fff}
+a{text-decoration:none;color:inherit}
+.container{max-width:1160px;margin:0 auto;padding:0 28px}
+::selection{background:rgba(58,110,237,.55);color:#fff}
+nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(6,8,13,.72);backdrop-filter:blur(18px) saturate(160%);-webkit-backdrop-filter:blur(18px) saturate(160%);border-bottom:1px solid var(--stroke-soft)}
+nav .container{display:flex;justify-content:space-between;align-items:center;height:70px}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Space Grotesk';font-weight:700;font-size:1.05rem;color:#fff}
+.brand img{width:32px;height:32px;border-radius:50%;object-fit:cover;box-shadow:0 0 18px rgba(58,110,237,.45)}
+nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+nav ul a{color:var(--muted);font-size:.9rem;font-weight:500;transition:.2s}
+nav ul a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:100px;font-weight:600;font-size:.92rem;padding:13px 26px;transition:.25s cubic-bezier(.4,0,.2,1);cursor:pointer;border:none}
+.btn-primary{background:var(--gloss),var(--grad);color:#fff;box-shadow:0 8px 30px rgba(58,110,237,.4),inset 0 1px 0 rgba(255,255,255,.18)}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 14px 44px rgba(58,110,237,.55)}
+.btn-ghost{background:rgba(255,255,255,.04);color:var(--text);border:1px solid var(--stroke);backdrop-filter:blur(8px)}
+.btn-ghost:hover{border-color:rgba(139,171,250,.45);background:rgba(92,137,246,.1)}
+.btn-wa{background:#1FBA6C;color:#04160D;box-shadow:0 8px 30px rgba(31,186,108,.35),inset 0 1px 0 rgba(255,255,255,.25)}
+.btn-sm{padding:9px 18px;font-size:.85rem}
+.hero{position:relative;padding:170px 0 90px;text-align:center;overflow:hidden;background:radial-gradient(ellipse 55% 42% at 50% -8%,rgba(0,102,255,.14),transparent 70%),var(--bg)}
+.hero::before{display:none}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(139,171,250,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(139,171,250,.05) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 62% at 50% 35%,#000 20%,transparent 70%);pointer-events:none}
+.pill{display:inline-flex;align-items:center;gap:9px;font-size:.8rem;font-weight:700;color:#9CC0FF;background:linear-gradient(180deg,rgba(58,110,237,.2),rgba(20,47,112,.14));border:1px solid rgba(0, 102, 255,.35);border-radius:100px;padding:7px 16px;margin-bottom:30px;box-shadow:0 0 26px rgba(58,110,237,.22),inset 0 1px 0 rgba(255,255,255,.1)}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px #0066FF;animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.1rem);font-weight:700;max-width:880px;margin:0 auto 24px;color:#fff}
+.hero h1 .hl{background:linear-gradient(110deg,#9CC0FF 10%,#4D8DFF 55%,#0066FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes shimmer{0%{background-position:-200% 50%}100%{background-position:200% 50%}}
+.hero p{font-size:1.12rem;color:var(--muted);max-width:660px;margin:0 auto 36px}
+.hero .ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.trust{margin-top:44px;display:flex;gap:42px;justify-content:center;flex-wrap:wrap;color:var(--dim);font-size:.86rem;font-weight:500}
+.trust b{color:#fff;font-family:'Space Grotesk';font-size:1.25rem;display:block}
+section{padding:84px 0;position:relative}
+.sec-head{max-width:660px;margin-bottom:52px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.kicker{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(110deg,#9CC0FF,#0066FF);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px;display:block}
+.sec-head h2{font-size:clamp(1.85rem,3.8vw,2.6rem);font-weight:700;color:#fff}
+.sec-head p{color:var(--muted);margin-top:16px;font-size:1.02rem}
+/* problem cards */
+.pain{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.pain-card{background:var(--gloss),linear-gradient(165deg,#141833,#0A0E29);border:1px solid var(--stroke-soft);border-radius:18px;padding:32px;display:flex;gap:20px;box-shadow:var(--shadow-sm);transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .3s}
+.pain-card:hover{transform:translateY(-3px);border-color:rgba(251,113,133,.4)}
+.pain-card .ico{font-size:1.7rem}
+.pain-card b{font-family:'Space Grotesk';font-size:1.1rem;display:block;margin-bottom:8px;color:#fff}
+.pain-card p{color:var(--muted);font-size:.93rem}
+.pain-card .cost{color:var(--crimson);font-weight:600;font-size:.85rem;margin-top:12px;display:block}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.b-card{background:var(--gloss),linear-gradient(165deg,#141833,#0A0E29);border:1px solid var(--stroke-soft);border-radius:18px;padding:30px;position:relative;overflow:hidden;transition:transform .4s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s;box-shadow:var(--shadow-sm)}
+.b-card:hover{border-color:rgba(0, 102, 255,.4);box-shadow:0 24px 70px rgba(0,0,0,.55),0 0 46px rgba(58,110,237,.16);transform:translateY(-4px)}
+.b-card::after{content:"";position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent)}
+.b-card .tag{display:inline-flex;align-items:center;gap:7px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px}
+.b-card .tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:pulse 1.8s infinite}
+.b-card h3{font-size:1.15rem;margin-bottom:8px;color:#fff}
+.b-card p{color:var(--muted);font-size:.9rem}
+.mock{margin-top:20px;background:rgba(255,255,255,.04);border:1px solid var(--stroke-soft);border-radius:13px;padding:14px 18px;font-size:.83rem;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--muted)}
+.mock .amt{font-family:'Space Grotesk';font-weight:700;color:var(--amber)}
+.mock .who{color:var(--dim)}
+.badge{display:inline-block;background:rgba(92,137,246,.15);color:#9CC0FF;border:1px solid rgba(139,171,250,.35);border-radius:100px;font-size:.7rem;font-weight:700;padding:3px 10px}
+.gauge{margin-top:20px;display:flex;align-items:center;gap:16px}
+.ring{width:72px;height:72px;border-radius:50%;background:conic-gradient(#0066FF 252deg,rgba(139,171,250,.18) 0);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 0 22px rgba(0, 102, 255,.25)}
+.ring::before{content:"";width:54px;height:54px;border-radius:50%;background:#0A0E29}
+.ring b{position:absolute;font-family:'Space Grotesk';font-size:.92rem;color:#fff}
+.gauge .lbl{font-size:.85rem;color:var(--muted)}
+.gauge .lbl b{color:#fff;font-family:'Space Grotesk'}
+/* features */
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.f{background:var(--gloss),linear-gradient(165deg,#141833,#0A0E29);border:1px solid var(--stroke-soft);border-radius:18px;padding:28px;transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .3s;box-shadow:var(--shadow-sm)}
+.f:hover{transform:translateY(-3px);border-color:rgba(92,137,246,.45)}
+.f .ico{font-size:1.55rem;display:block;margin-bottom:14px;filter:drop-shadow(0 0 12px rgba(92,137,246,.5))}
+.f b{font-family:'Space Grotesk';font-size:1.02rem;display:block;margin-bottom:7px;color:#fff}
+.f p{color:var(--muted);font-size:.88rem}
+/* versus */
+.vs{width:100%;border-collapse:collapse;font-size:.92rem;background:var(--gloss),linear-gradient(165deg,#141833,#0A0E29);border-radius:18px;overflow:hidden;border:1px solid var(--stroke-soft);box-shadow:var(--shadow-sm)}
+.vs th,td{padding:16px 22px;text-align:left}
+.vs th{font-family:'Space Grotesk';font-size:.9rem;color:#fff;background:rgba(255,255,255,.03)}
+.vs td{border-top:1px solid var(--stroke-soft);color:var(--muted)}
+.vs td:first-child{color:var(--text);font-weight:600}
+.vs .us{color:var(--green);font-weight:600}
+.vs .them{color:var(--dim)}
+/* pricing */
+.price{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.tier{background:var(--gloss),linear-gradient(165deg,#141833,#0A0E29);border:1px solid var(--stroke-soft);border-radius:20px;padding:34px;display:flex;flex-direction:column;position:relative;box-shadow:var(--shadow-sm);transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .3s}
+.tier:hover{transform:translateY(-4px)}
+.tier.hot{border-color:rgba(0, 102, 255,.55);box-shadow:0 24px 70px rgba(0,0,0,.55),0 0 50px rgba(0, 102, 255,.18)}
+.tier .pop{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gloss),linear-gradient(160deg,#0066FF,#0066FF);color:#060D1F;border-radius:100px;font-size:.72rem;font-weight:700;padding:5px 16px;letter-spacing:.06em;box-shadow:0 8px 26px rgba(0, 102, 255,.4)}
+.tier h3{font-size:1.25rem;margin-bottom:6px;color:#fff}
+.tier .who{color:var(--dim);font-size:.83rem;margin-bottom:22px}
+.tier .amt{font-family:'Space Grotesk';font-size:2.3rem;font-weight:700;color:#fff}
+.tier .amt span{font-size:.9rem;color:var(--dim);font-weight:500}
+.tier .per{color:var(--dim);font-size:.78rem;margin-bottom:6px}
+.tier .payback{color:var(--amber);font-size:.8rem;font-weight:600;margin-bottom:22px}
+.tier ul{list-style:none;flex:1;margin-bottom:26px}
+.tier li{padding:7px 0;color:var(--muted);font-size:.88rem;display:flex;gap:10px;align-items:flex-start}
+.tier li::before{content:"✓";color:var(--amber);font-weight:700;flex-shrink:0}
+.tier .btn{width:100%}
+.pricing-note{color:var(--dim);font-size:.8rem;text-align:center;margin-top:26px}
+/* faq */
+.faq{max-width:760px;margin:0 auto}
+.q{background:var(--gloss),linear-gradient(165deg,#141833,#0A0E29);border:1px solid var(--stroke-soft);border-radius:16px;margin-bottom:14px;padding:22px 26px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.q b{font-family:'Space Grotesk';font-size:.98rem;display:block;margin-bottom:10px;color:#fff}
+.q p{color:var(--muted);font-size:.9rem}
+.band{background:radial-gradient(ellipse 55% 60% at 50% 0%,rgba(58,110,237,.14),transparent 70%),var(--bg-soft);border-top:1px solid var(--stroke-soft);border-bottom:1px solid var(--stroke-soft);text-align:center;padding:92px 0}
+.band h2{font-size:clamp(1.85rem,4vw,2.7rem);max-width:680px;margin:0 auto 16px;color:#fff}
+.band p{color:var(--muted);max-width:540px;margin:0 auto 34px}
+footer{padding:60px 0 44px;border-top:1px solid var(--stroke-soft);background:#040508}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px;margin-bottom:44px}
+.f-grid .brand{margin-bottom:14px}
+.f-grid p{color:#858FA8;font-size:.87rem;max-width:300px}
+.f-col b{display:block;font-family:'Space Grotesk';margin-bottom:14px;font-size:.92rem;color:#fff}
+.f-col a{display:block;color:#858FA8;font-size:.87rem;padding:5px 0}
+.f-col a:hover{color:#9CC0FF}
+.f-bottom{border-top:1px solid rgba(139,171,250,.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#858FA8;font-size:.8rem}
+@media(max-width:960px){.feat{grid-template-columns:repeat(2,1fr)}.price{grid-template-columns:1fr;max-width:440px;margin:0 auto}.pain{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.feat,.bento{grid-template-columns:1fr}nav ul{display:none}.trust{gap:20px}.trust div{min-width:38%}}
+
+/* HERO MOCKUP — glossy chrome dashboard */
+.mock-wrap{position:relative;margin:70px auto 0;max-width:940px;width:100%}
+.mock-wrap::before{content:"";position:absolute;inset:-1px;border-radius:22px;background:linear-gradient(135deg,rgba(0, 102, 255,.5),rgba(139,171,250,.25) 50%,rgba(58,110,237,.12));z-index:-1}
+.mock-wrap::after{content:"";position:absolute;inset:0;border-radius:22px;background:radial-gradient(60% 55% at 50% 115%,rgba(58,110,237,.35),transparent 70%);filter:blur(50px);z-index:-2}
+.mock{position:relative;border-radius:20px;background:linear-gradient(180deg,#141A2A,#0A0E29);border:1px solid rgba(139,171,250,.22);box-shadow:0 40px 110px rgba(0,0,0,.7),0 0 70px rgba(58,110,237,.22),inset 0 1px 0 rgba(255,255,255,.14);overflow:hidden;text-align:left}
+.mock-top{display:flex;align-items:center;gap:8px;padding:13px 16px;border-bottom:1px solid rgba(139,171,250,.09);background:rgba(255,255,255,.02)}
+.mock-top i{width:11px;height:11px;border-radius:50%}
+.mock-top i:nth-child(1){background:#FF5F57}.mock-top i:nth-child(2){background:#FEBC2E}.mock-top i:nth-child(3){background:#28C840}
+.mock-top span{margin-left:10px;font-size:.72rem;color:#94A3B8;letter-spacing:.06em;font-weight:600}
+.mock-body{display:grid;grid-template-columns:170px 1fr;min-height:330px;min-width:0}
+.mock-side{border-right:1px solid rgba(139,171,250,.09);padding:18px 12px;display:flex;flex-direction:column;gap:4px;background:rgba(255,255,255,.015)}
+.mock-side b{font-family:'Space Grotesk',sans-serif;font-size:.8rem;padding:8px 10px 12px;display:flex;align-items:center;gap:8px;color:#fff}
+.mock-side b .dot{width:8px;height:8px;border-radius:3px;background:#0066FF;box-shadow:0 0 8px #0066FF}
+.mock-side a{font-size:.76rem;color:#94A3B8;font-weight:600;padding:7px 10px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;transition:.15s}
+.mock-side a:hover{background:rgba(92,137,246,.12);color:#fff}
+.mock-side a i{font-style:normal;font-size:.6rem;color:#94A3B8;border:1px solid rgba(139,171,250,.2);border-radius:5px;padding:1px 5px;background:rgba(255,255,255,.03)}
+.mock-side a.on{background:rgba(92,137,246,.18);color:#9CC0FF;border:1px solid rgba(139,171,250,.3)}
+.mock-main{padding:22px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.mock-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.kpi{background:var(--gloss),rgba(255,255,255,.03);border:1px solid rgba(139,171,250,.09);border-radius:13px;padding:12px 14px}
+.kpi span{font-size:.64rem;color:#94A3B8;font-weight:700;text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:5px}
+.kpi b{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;color:#fff}
+.kpi em{font-style:normal;font-size:.62rem;color:#9CC0FF;font-weight:700}
+.mock-panels{display:grid;grid-template-columns:1.4fr 1fr;gap:10px;flex:1}
+.mock-panel{background:var(--gloss),rgba(255,255,255,.025);border:1px solid rgba(139,171,250,.09);border-radius:13px;padding:14px}
+.mock-panel h4{font-family:'Space Grotesk',sans-serif;font-size:.72rem;color:#94A3B8;margin-bottom:12px;letter-spacing:.04em}
+.bars{display:flex;align-items:flex-end;gap:7px;height:86px}
+.bars i{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(180deg,#0066FF,#0066FF 120%);box-shadow:0 0 14px rgba(58,110,237,.3);animation:grow 1s cubic-bezier(.2,.7,.2,1) both}
+.bars i:nth-child(2){animation-delay:.08s}.bars i:nth-child(3){animation-delay:.16s}.bars i:nth-child(4){animation-delay:.24s}.bars i:nth-child(5){animation-delay:.32s}.bars i:nth-child(6){animation-delay:.4s}.bars i:nth-child(7){animation-delay:.48s}
+@keyframes grow{from{height:6px}to{height:var(--h)}}
+.feed{display:flex;flex-direction:column;gap:9px}
+.feed div{display:flex;gap:9px;align-items:center;font-size:.72rem;color:#94A3B8;font-weight:600}
+.feed .qr{width:22px;height:22px;border-radius:7px;background:rgba(34,211,238,.12);border:1px solid rgba(34,211,238,.3);color:#67E8F9;display:flex;align-items:center;justify-content:center;font-size:.55rem;flex-shrink:0;font-weight:800}
+.feed .wa{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.35);color:#6EE7B7}
+.feed time{margin-left:auto;color:#94A3B8;font-size:.62rem}
+.mock-cap{text-align:center;margin-top:24px;font-size:.75rem;color:#94A3B8;font-weight:600}
+.clientstrip{padding:40px 0;border-top:1px solid rgba(139,171,250,.09);border-bottom:1px solid rgba(139,171,250,.09);background:rgba(255,255,255,.015)}
+.clientstrip p{text-align:center;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:#94A3B8;margin-bottom:20px;font-weight:700}
+.clientstrip .bp-marquee-track span{color:#94A3B8;font-weight:700;font-size:.95rem}
+@media(max-width:760px){.mock-body{grid-template-columns:1fr;min-width:0}.mock-side{flex-direction:row;overflow:auto;border-right:none;border-bottom:1px solid rgba(139,171,250,.09)}.mock-kpis{grid-template-columns:repeat(2,1fr);min-width:0}.mock-panels{grid-template-columns:1fr;min-width:0}.mock-main{min-width:0}}
+@media(prefers-reduced-motion:reduce){.hero h1 .hl{animation:none}.bp-hero-step,.bp-hero-delay{animation:none;opacity:1}}
+
+.hero{position:relative}
+/* v7: texture override retired — inherits shared Obsidian Glow blue canvas from bp-obsidian-veins.css */
+.hero .ov-canvas::after{background:
+  /* v5.4 reference-match (26 Sep): founder reference glows evenly — old .5/.95
+     veils crushed it to near-black. White-on-violet is ~11:1, no backing needed;
+     only a whisper of edge darkening for the section transition. */
+  radial-gradient(120% 90% at 50% 8%,rgba(3,4,7,0) 55%,rgba(3,4,7,.28) 92%),
+  linear-gradient(180deg,rgba(3,4,7,.12) 0%,rgba(3,4,7,0) 22%,rgba(3,4,7,0) 90%,rgba(3,4,7,.55) 100%)}
+.hero .ov-canvas{background:radial-gradient(52% 40% at 50% -6%,rgba(0,102,255,.16),transparent 70%),#0A0E29}
+.hero .container{position:relative;z-index:2}
+/* ============ FRONTEND SHOWCASE ============ */
+.showcase{position:relative;padding:96px 0 40px}
+.sc-stage{position:relative;display:flex;justify-content:center;align-items:flex-end;gap:0;min-height:540px;perspective:1200px}
+.sc-laptop{width:min(760px,92%);position:relative;z-index:1;transform:rotateX(4deg);filter:drop-shadow(0 40px 60px rgba(0,0,0,.6))}
+.sc-screen{background:#0A0E29;border:1px solid rgba(255,255,255,.08);border-radius:16px 16px 6px 6px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 60px rgba(37,99,235,.16),inset 0 1px 0 rgba(255,255,255,.06);display:grid;grid-template-columns:122px 1fr;text-align:left}
+.sc-side{background:#141833;border-right:1px solid #272C49;padding:12px 10px;display:flex;flex-direction:column;gap:2px}
+.sc-brand{font:700 .82rem/1.1 'Space Grotesk';color:#fff;padding:2px 6px 12px;display:flex;flex-direction:column;gap:1px}
+.sc-brand small{font:500 .55rem/1 'Plus Jakarta Sans';color:#94A3B8;letter-spacing:.01em}
+.sc-nav{font:600 .66rem/1 'Plus Jakarta Sans';color:#94A3B8;padding:7px 9px;border-radius:8px;display:flex;align-items:center;gap:7px}
+.sc-nav i{width:5px;height:5px;border-radius:2px;background:#374151;flex:none}
+.sc-nav.on{background:#0066FF;color:#fff}
+.sc-nav.on i{background:#fff}
+.sc-view{margin-top:auto;font:600 .64rem/1 'Plus Jakarta Sans';color:#60a5fa;padding:10px 6px 2px;border-top:1px solid #272C49}
+.sc-main{display:flex;flex-direction:column;min-width:0}
+.sc-appbar{display:flex;align-items:center;gap:10px;padding:9px 14px;background:#0F1425;border-bottom:1px solid #272C49;color:#e5e7eb}
+.sc-branch{display:flex;align-items:center;gap:6px;background:#141833;border:1px solid #272C49;border-radius:7px;padding:5px 9px;font:600 .68rem/1 'Space Grotesk'}
+.sc-appbar .r{margin-left:auto;display:flex;align-items:center;gap:10px}
+.sc-search{width:14px;height:14px;border:1.5px solid #4b5563;border-radius:50%;position:relative;flex:none}
+.sc-search::after{content:"";position:absolute;width:5px;height:1.5px;background:#4b5563;transform:rotate(45deg);bottom:-2px;right:-3px}
+.sc-bell{width:13px;height:13px;background:#4b5563;border-radius:50% 50% 18% 18%;position:relative;flex:none}
+.sc-bell::after{content:"9+";position:absolute;top:-9px;right:-11px;background:#ef4444;color:#fff;font:700 .5rem/1 'Space Grotesk';padding:2px 3px;border-radius:99px}
+.sc-ava{width:20px;height:20px;border-radius:50%;background:#0066FF;color:#fff;font:700 .55rem/20px 'Space Grotesk';text-align:center;flex:none}
+.sc-content{padding:13px 15px 15px;min-width:0}
+.sc-dash{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.sc-dash h4{font:700 1.04rem/1 'Space Grotesk';color:#fff}
+.sc-dash p{font:500 .64rem/1.4 'Plus Jakarta Sans';color:#94A3B8;margin-top:3px}
+.sc-btns{display:flex;gap:7px;flex-wrap:wrap}
+.sc-btn{font:700 .62rem/1 'Plus Jakarta Sans';padding:7px 10px;border-radius:8px;white-space:nowrap}
+.sc-btn.pri{background:#0066FF;color:#fff}
+.sc-btn.sec{border:1px solid #272C49;color:#e5e7eb;background:#141833}
+.sc-tabs{display:flex;gap:6px;margin:11px 0 0}
+.sc-tab{font:600 .62rem/1 'Plus Jakarta Sans';color:#94A3B8;padding:6px 10px;border-radius:8px;border:1px solid transparent}
+.sc-tab.on{color:#fff;border-color:#0066FF;background:rgba(37,99,235,.12)}
+.sc-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0 0;padding:0}
+.sc-kpi{background:#141833;border:1px solid #272C49;border-radius:11px;padding:10px 12px;box-shadow:none}
+.sc-kpi.money{background:linear-gradient(150deg,rgba(37,99,235,.4),rgba(37,99,235,.08));border-color:rgba(37,99,235,.5)}
+.sc-kpi span{display:block;font:600 .58rem/1 'Plus Jakarta Sans';color:#94A3B8;letter-spacing:.04em;text-transform:uppercase}
+.sc-kpi b{display:block;font:700 1rem/1.2 'Space Grotesk';color:#fff;margin:4px 0 2px}
+.sc-kpi.money b{background:linear-gradient(135deg,#FFFFFF,#BFDBFE);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sc-kpi em{font-style:normal;font:600 .58rem/1 'Plus Jakarta Sans';color:#21C45D}
+.sc-cols{display:grid;grid-template-columns:1.5fr 1fr;gap:10px;padding:12px 0 0}
+.sc-feed-h{font:600 .62rem/1 'Space Grotesk';letter-spacing:.06em;text-transform:uppercase;color:#94A3B8;padding:2px 2px 8px}
+.sc-feed-items .sc-item{display:flex;gap:9px;align-items:flex-start;padding:8px 10px;border-radius:10px;margin-bottom:5px;background:#141833;border:1px solid #272C49;animation:scItemIn .5s both}
+.sc-item i{width:8px;height:8px;border-radius:50%;margin-top:5px;flex:none}
+.sc-item i.ok{background:#21C45D;box-shadow:0 0 6px rgba(34,197,94,.5)}.sc-item i.wa{background:#0066FF;box-shadow:0 0 6px rgba(37,99,235,.5)}.sc-item i.ai{background:#60a5fa;box-shadow:0 0 6px rgba(96,165,250,.45)}
+.sc-item b{display:block;font-size:.76rem;color:#F1F5F9}
+.sc-item span{font-size:.68rem;color:#94A3B8}
+.sc-bars{display:flex;align-items:flex-end;gap:8px;height:132px;padding:8px 4px 0}
+.sc-bars div{flex:1;background:linear-gradient(180deg,#338CFF,#0052CC);border-radius:5px 5px 3px 3px;height:var(--h);animation:scBar 2.4s ease-in-out infinite alternate;box-shadow:0 3px 10px rgba(37,99,235,.3)}
+.sc-bars span{display:block;text-align:center;font-size:.62rem;color:#94A3B8;margin-top:6px}
+.sc-note{font-size:.68rem;color:#60a5fa;padding:8px 2px 0}
+.sc-base{height:14px;background:linear-gradient(180deg,#15171D,#0A0E29);border-radius:0 0 14px 14px;border:1px solid rgba(255,255,255,.05);border-top:none}.sc-base::after{content:"";display:block;width:18%;height:4px;background:rgba(255,255,255,.08);border-radius:0 0 8px 8px;margin:0 auto}
+.sc-phone{width:250px;z-index:2;position:relative;flex:none;background:#0A0E29;border:1px solid rgba(156, 192, 255,.22);border-radius:30px;padding:12px 10px 10px;margin-left:-56px;margin-bottom:-14px;transform:rotate(-2deg);box-shadow:0 0 50px rgba(58,110,237,.25),0 30px 50px rgba(0,0,0,.65);animation:scFloat 5s ease-in-out infinite}
+.sc-notch{width:78px;height:5px;border-radius:5px;background:rgba(255,255,255,.12);margin:0 auto 8px}
+.sc-wa-head{display:flex;align-items:center;gap:8px;background:rgba(58,110,237,.16);border-radius:12px 12px 4px 4px;padding:8px 10px;font:600 .78rem/1 'Space Grotesk';color:#D5E1FF}
+.sc-wa-logo{width:18px;height:18px;border-radius:50%;background:#25D366;flex:none;position:relative}
+.sc-typing{margin-left:auto;display:flex;gap:3px}
+.sc-typing i{width:5px;height:5px;border-radius:50%;background:#9CC0FF;animation:scDot 1.2s infinite}
+.sc-typing i:nth-child(2){animation-delay:.2s}.sc-typing i:nth-child(3){animation-delay:.4s}
+.sc-msgs{padding:12px 6px 4px;display:flex;flex-direction:column;gap:7px;min-height:212px}
+.sc-msg{max-width:86%;padding:8px 11px;border-radius:11px;font-size:.72rem;line-height:1.45}
+.sc-msg.in{align-self:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);color:#E2E8F0;animation:scItemIn .6s .2s both}
+.sc-msg.out{align-self:flex-end;background:rgba(37,211,102,.14);border:1px solid rgba(37,211,102,.25);color:#BBF7D0;animation:scItemIn .6s .8s both}
+.sc-msg.last{animation:scItemIn .6s 1.4s both}
+.sc-msg b{color:#9CC0FF}
+.sc-wa-foot{font-size:.6rem;color:#94A3B8;text-align:center;padding:8px 4px 2px;border-top:1px solid rgba(255,255,255,.06)}
+.sc-chip{position:absolute;z-index:3;background:rgba(11,12,18,.9);border:1px solid rgba(0, 102, 255,.35);color:#D5E1FF;font:500 .72rem/1.3 'Plus Jakarta Sans';padding:9px 14px;border-radius:999px;backdrop-filter:blur(8px);box-shadow:0 8px 30px rgba(0,0,0,.5),0 0 20px rgba(58,110,237,.15);animation:scChip 4s ease-in-out infinite}
+.sc-chip.c1{top:6%;left:2%;animation-delay:0s}
+.sc-chip.c2{top:32%;right:1%;animation-delay:1.3s}
+.sc-chip.c3{bottom:4%;left:6%;animation-delay:2.6s}
+.sc-cap{text-align:center;color:#64748B;font-size:.72rem;margin-top:34px}
+@keyframes scItemIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes scBar{from{transform:scaleY(.92)}to{transform:scaleY(1)}}
+@keyframes scPulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes scDot{0%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+@keyframes scFloat{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-10px)}}
+@keyframes scChip{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media(max-width:900px){.sc-stage{flex-direction:column;align-items:center;min-height:0;gap:26px}.sc-laptop{transform:none;width:100%}.sc-phone{margin:0;transform:none;animation:none}.sc-chip{display:none}.sc-kpis{grid-template-columns:repeat(2,1fr)}.sc-cols{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.sc-bars div,.sc-phone,.sc-chip,.sc-typing i{animation:none}.sc-item,.sc-msg{animation:none}}
+
+/* inline lead form — app-true navy tokens */
+.gform{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:820px;margin:26px auto 0;text-align:left}
+.gform input{background:#0D1230;border:1px solid #272C49;border-radius:10px;padding:12px 14px;color:#F1F5F9;font:inherit;font-size:.9rem;width:100%}
+.gform input::placeholder{color:#5A6480}
+.gform input:focus{outline:none;border-color:#2563EB;box-shadow:0 0 0 3px rgba(37,99,235,.18)}
+.gform .gconsent{grid-column:1/-1;display:flex;align-items:center;gap:9px;color:#94A3B8;font-size:.8rem}
+.gform button{grid-column:1/-1;justify-self:center}
+.gform .gerr{grid-column:1/-1;color:#F87171;font-size:.8rem;display:none}
+.gform .gok{grid-column:1/-1;color:#21C45D;font-weight:700;font-size:.95rem;text-align:center}
+.gform .gok a{color:#4D94FF}
+
+/* showcase mockup: collapse sidebar to horizontal strip on mobile (was overflowing 390px) */
+@media(max-width:760px){
+  .sc-screen{grid-template-columns:1fr}
+  .sc-side{flex-direction:row;overflow-x:auto;border-right:none;border-bottom:1px solid #272C49;align-items:center;padding:8px 10px}
+  .sc-side .sc-brand{display:none}
+  .sc-side a{white-space:nowrap;padding:6px 9px}
+  .sc-side .sc-view{display:none}
+  .sc-laptop{width:96%}
+}
+@media(max-width:760px){.gform{grid-template-columns:1fr}}
+/* sticky mobile CTA — appears after hero, drives demo booking */
+.sticky-cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;gap:10px;align-items:center;justify-content:space-between;background:rgba(10,14,41,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid #272C49;border-radius:16px;padding:12px 14px;box-shadow:0 18px 50px rgba(0,0,0,.55);transform:translateY(120%);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.sticky-cta.show{transform:translateY(0)}
+.sticky-cta .sc-t{font:600 .8rem/1.25 'Plus Jakarta Sans';color:#F1F5F9}
+.sticky-cta .sc-t small{display:block;color:#94A3B8;font-size:.72rem;margin-top:2px}
+.sticky-cta a{flex-shrink:0}
+.sticky-cta .btn{padding:11px 18px;font-size:.85rem;margin:0}
+@media(max-width:760px){.sticky-cta{display:flex}}
+
+/* ---- about section (added 27 Sep) ---- */
+.about-lead{max-width:760px;margin:14px auto 0;color:#B6C2D6;font-size:1.02rem;line-height:1.65}
+.about-grid{grid-template-columns:repeat(4,1fr)}
+.about-grid .sec-card b{font-size:.98rem}
+.about-grid .sec-card p{font-size:.85rem;line-height:1.6}
+.about-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.about-strip>div{background:linear-gradient(140deg,#0d2a5e33,#0D1230);border:1px solid #272C49;border-radius:14px;padding:18px 20px}
+.about-strip b{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#7AA5FF;margin-bottom:6px}
+.about-strip span{font-size:.85rem;color:#B6C2D6;line-height:1.55}
+@media(max-width:960px){.about-grid{grid-template-columns:1fr 1fr}.about-strip{grid-template-columns:1fr}}
+
+/* ---- about section (added 27 Sep) ---- */
+.about-lead{max-width:760px;margin:14px auto 0;color:#B6C2D6;font-size:1.02rem;line-height:1.65}
+.about-grid{grid-template-columns:repeat(4,1fr)}
+.about-grid .sec-card b{font-size:.98rem}
+.about-grid .sec-card p{font-size:.85rem;line-height:1.6}
+.about-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.about-strip>div{background:linear-gradient(140deg,#0d2a5e33,#0D1230);border:1px solid #272C49;border-radius:14px;padding:18px 20px}
+.about-strip b{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#7AA5FF;margin-bottom:6px}
+.about-strip span{font-size:.85rem;color:#B6C2D6;line-height:1.55}
+@media(max-width:960px){.about-grid{grid-template-columns:1fr 1fr}.about-strip{grid-template-columns:1fr}}
+
+/* ---- gallery + kit + partners (added 27 Sep) ---- */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.gal figure{margin:0;background:#0D1230;border:1px solid #272C49;border-radius:14px;overflow:hidden}
+.gal img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;transition:transform .5s ease}
+.gal figure:hover img{transform:scale(1.03)}
+.gal figcaption{padding:10px 14px;font-size:.72rem;color:#94A3B8;border-top:1px solid #272C49;line-height:1.5}
+.gal figcaption b{color:#F1F5F9;display:block;font-size:.8rem;margin-bottom:2px}
+.kit{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.kit a.kcard{display:flex;align-items:center;gap:16px;background:#0D1230;border:1px solid #272C49;border-radius:14px;padding:18px 20px;text-decoration:none;color:#F1F5F9;transition:border-color .3s,transform .3s}
+.kit a.kcard:hover{border-color:#0066FF;transform:translateY(-2px)}
+.kcard .file{width:44px;height:54px;border-radius:6px;background:#141833;border:1px solid #272C49;display:flex;align-items:flex-end;justify-content:flex-end;padding:4px;flex:none}
+.kcard .file::after{content:"PDF";font-size:.55rem;font-weight:800;color:#0066FF;letter-spacing:.05em}
+.kcard b{display:block;font-size:.95rem}
+.kcard span{font-size:.75rem;color:#94A3B8;display:block;margin-top:3px;line-height:1.45}
+.partner-strip{margin-top:60px;background:linear-gradient(140deg,#0d2a5e,#0A0E29);border:1px solid #1d4bc4;border-radius:18px;padding:34px 38px;display:flex;align-items:center;gap:30px;flex-wrap:wrap}
+.partner-strip h3{font-size:1.35rem;line-height:1.25;margin-top:8px}
+.partner-strip p{color:#94A3B8;font-size:.85rem;margin-top:8px;max-width:520px}
+.partner-strip .pk-cta{margin-left:auto;display:flex;gap:10px;flex-wrap:wrap}
+.pk-badge{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;font-weight:700;letter-spacing:.12em;color:#60a5fa;text-transform:uppercase}
+@media(max-width:900px){.gal{grid-template-columns:1fr}.kit{grid-template-columns:1fr}.partner-strip{padding:26px}.partner-strip .pk-cta{margin-left:0}}
+@media(max-width:640px){.hero{padding:110px 0 60px}}
+
+.vs-swipe{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.vs-swipe::-webkit-scrollbar{display:none}
+.vs-swipe table.vs{margin-top:26px}
+/* ---- security section (added 27 Sep) ---- */
+.sec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px}
+.sec-card{background:#0D1230;border:1px solid #272C49;border-radius:14px;padding:20px 22px}
+.sec-card b{display:flex;align-items:center;gap:10px;font-size:.92rem;margin-bottom:8px}
+.sec-card b::before{content:"";width:9px;height:9px;border-radius:99px;background:#0066FF;flex:none;box-shadow:0 0 10px rgba(0,102,255,.6)}
+.sec-card p{font-size:.78rem;color:#94A3B8;line-height:1.55}
+.sec-note{margin-top:18px;font-size:.72rem;color:#64748b;text-align:center;line-height:1.5}
+@media(max-width:900px){.sec-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "SoftwareApplication", "@id": "https://somilsharma2000.github.io/gym-os/#app", "name": "Gym OS", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Complete gym management operating system for Indian gyms: WhatsApp automation, QR check-in, lead CRM, UPI fee collection, owner dashboard and a branded website included.", "url": "https://somilsharma2000.github.io/gym-os/", "author": {"@type": "Organization", "name": "Beyond Pixells", "url": "https://somilsharma2000.github.io/beyond-pixells/"}, "offers": [{"@type": "Offer", "name": "Starter", "price": "999", "priceCurrency": "INR", "description": "₹999/month + setup"}, {"@type": "Offer", "name": "Growth", "price": "1999", "priceCurrency": "INR", "description": "₹1,999/month + setup"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "My staff isn't technical.", "acceptedAnswer": {"@type": "Answer", "text": "Gym OS runs where your staff already lives: WhatsApp and a browser. Check-in is one scan. We train your front desk in one call — and we do the data entry for you."}}, {"@type": "Question", "name": "I already use a register and Excel.", "acceptedAnswer": {"@type": "Answer", "text": "Send us a photo of your register and we'll transfer your entire member base into Gym OS within 24 hours, or you pay nothing for setup."}}, {"@type": "Question", "name": "Is there a cheaper option?", "acceptedAnswer": {"@type": "Answer", "text": "Cheap offline software doesn't send WhatsApp reminders or collect UPI. It costs you ₹50,000+ a year in lost renewals. Gym OS pays for itself by saving 2 members a month."}}, {"@type": "Question", "name": "What about my data?", "acceptedAnswer": {"@type": "Answer", "text": "Your data is yours. Every record is exportable anytime, and member consent is captured at every lead form per India's DPDP Act."}}, {"@type": "Question", "name": "Will my members actually use it?", "acceptedAnswer": {"@type": "Answer", "text": "They don't have to adopt anything — no app downloads. Reminders, QR passes and plans arrive on WhatsApp."}}, {"@type": "Question", "name": "How fast is setup?", "acceptedAnswer": {"@type": "Answer", "text": "Setup takes about 24 hours: branded website, data transfer, staff training and your owner dashboard."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Beyond Pixells", "item": "https://somilsharma2000.github.io/beyond-pixells/"}, {"@type": "ListItem", "position": 2, "name": "Gym OS", "item": "https://somilsharma2000.github.io/gym-os/"}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "My staff isn't technical.", "acceptedAnswer": {"@type": "Answer", "text": "Gym OS runs where your staff already lives: WhatsApp and a browser. Check-in is one scan. We train your front desk in one call — and we do the data entry for you."}}, {"@type": "Question", "name": "I already use a register and Excel.", "acceptedAnswer": {"@type": "Answer", "text": "Perfect — send us a photo of your register and we'll transfer your entire member base into Gym OS within 24 hours, or you pay nothing for setup. Keep the register as backup; you'll stop using it on your own."}}, {"@type": "Question", "name": "There's cheaper software out there.", "acceptedAnswer": {"@type": "Answer", "text": "That ₹2,000 'lifetime' software doesn't send WhatsApp reminders, can't collect UPI, and has no support. It costs you ₹50,000+ a year in lost renewals. Gym OS pays for itself by saving 2 members a month."}}, {"@type": "Question", "name": "What about my data?", "acceptedAnswer": {"@type": "Answer", "text": "Your data is yours. Every record is exportable anytime, and your members' details stay in your gym's system — with consent captured at every lead form, per India's DPDP Act."}}, {"@type": "Question", "name": "Will my members actually use it?", "acceptedAnswer": {"@type": "Answer", "text": "They don't have to 'adopt' anything. No app downloads. Reminders, QR passes, receipts and plans arrive on WhatsApp — which they check 50 times a day already."}}, {"@type": "Question", "name": "What if I need something custom?", "acceptedAnswer": {"@type": "Answer", "text": "We're a product studio, not a reseller. Need a custom report, a festival campaign flow, or an integration? We build it — and the best requests become features for every gym on Gym OS."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Beyond Pixells", "item": "https://somilsharma2000.github.io/beyond-pixells/"}, {"@type": "ListItem", "position": 2, "name": "Gym OS", "item": "https://somilsharma2000.github.io/gym-os/"}]}</script>
+</head>
+<body>
+<div class="sticky-cta" id="sticky-cta">
+  <div class="sc-t">See Gym OS in action<small>Free demo — we'll walk you through the live dashboard.</small></div>
+  <a class="btn btn-primary" href="#demo">Book Free Demo →</a>
+</div>
+
+<div class="ov-grain" aria-hidden="true"></div>
+<div class="bp-scroll-progress-bar"></div>
+
+<nav>
+  <div class="container">
+    <a class="brand" href="#top"><img src="logo.png" alt="Gym OS">Gym OS <span style="font-size:.65rem;color:var(--dim);border:1px solid var(--stroke);padding:2px 8px;border-radius:100px;font-weight:600">by Beyond Pixells</span></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#showcase">See it</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#compare">Why Us</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="btn btn-primary btn-sm" href="#demo">Book Free Demo →</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="ov-canvas" aria-hidden="true"></div>
+  <div class="container">
+    <div class="pill bp-hero-step" style="--bp-hero-delay:0ms"><span class="dot"></span>Live demo open right now &middot; no signup needed</div>
+    <h1 class="bp-hero-step" style="--bp-hero-delay:100ms">Stop chasing fees. Start <span class="hl">running your gym.</span></h1>
+    <p class="bp-hero-step" style="--bp-hero-delay:220ms">Gym OS is the complete operating system for Indian gyms: automated WhatsApp renewal reminders, QR check-in, lead CRM, UPI fee collection, an owner dashboard — and a branded website included. Your members never download an app.</p>
+    <div class="ctas bp-hero-step" style="--bp-hero-delay:340ms">
+      <a class="btn btn-primary bp-magnetic-btn" href="#demo">Book Free Demo →</a>
+      <a class="btn btn-ghost" href="https://wa.me/917737077479?text=Hi!%20I%20run%20a%20gym%20and%20want%20a%20free%20Gym%20OS%20demo." >Book Free Demo on WhatsApp</a>
+    </div>
+    <div class="trust bp-hero-step" style="--bp-hero-delay:460ms">
+      <div><b>WhatsApp-first</b>members need zero new apps</div>
+      <div><b>Unlimited members</b>flat pricing, no per-member fees</div>
+      <div><b>24-hour setup</b>we transfer your register for you</div>
+    </div>
+    <div class="mock-wrap bp-hero-step" style="--bp-hero-delay:600ms">
+      <div class="mock">
+        <div class="mock-top"><i></i><i></i><i></i><span>GYM OS — your dashboard, from your phone</span></div>
+        <div class="mock-body">
+          <div class="mock-side">
+            <b><span class="dot"></span>Your Gym</b>
+            <a class="on">Members <i>1.2k</i></a>
+            <a>QR Check-ins <i>New</i></a>
+            <a>Lead CRM <i>7</i></a>
+            <a>WhatsApp <i>Auto</i></a>
+            <a>Billing · UPI <i>&#10003;</i></a>
+            <a>Reports</a>
+            <a>AI Insights</a>
+          </div>
+          <div class="mock-main">
+            <div class="mock-kpis">
+              <div class="kpi"><span>Active members</span><b>1,248</b> <em>&#9650; demo data</em></div>
+              <div class="kpi"><span>Check-ins today</span><b>214</b> <em>&#9650; demo data</em></div>
+              <div class="kpi"><span>Renewals sent</span><b>36</b> <em>auto</em></div>
+              <div class="kpi"><span>Overdue fees</span><b>&#8377;0</b> <em>chased by bot</em></div>
+            </div>
+            <div class="mock-panels">
+              <div class="mock-panel"><h4>Footfall this week</h4><div class="bars">
+                <i style="--h:40%;height:40%"></i><i style="--h:66%;height:66%"></i><i style="--h:52%;height:52%"></i><i style="--h:80%;height:80%"></i><i style="--h:58%;height:58%"></i><i style="--h:92%;height:92%"></i><i style="--h:70%;height:70%"></i>
+              </div></div>
+              <div class="mock-panel"><h4>WhatsApp just did this</h4><div class="feed">
+                <div><span class="qr wa">WA</span> Renewal reminder sent <time>now</time></div>
+                <div><span class="qr">QR</span> Member checked in <time>1m</time></div>
+                <div><span class="qr">&#43;</span> New lead captured <time>3m</time></div>
+                <div><span class="qr wa">&#8377;</span> UPI fee received <time>9m</time></div>
+              </div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mock-cap">Gym OS &middot; interface preview — demo data</div>
+    </div>
+
+  </div>
+</header>
+<section class="clientstrip" aria-label="Live client gyms">
+  <p>Running live in these gyms</p>
+  <div class="bp-marquee">
+    <div class="bp-marquee-track">
+      <span>Betta Bodies</span><span>·</span><span>Red's Gym</span><span>·</span><span>Flex N Tone</span><span>·</span><span>Fight Factory Manchester</span><span>·</span><span>Oxigen Fitness</span><span>·</span><span>IronForge Bengaluru</span><span>·</span><span>Iron Forge Hyderabad</span><span>·</span><span>PowerHouse Hyderabad</span><span>·</span>
+      <span>Betta Bodies</span><span>·</span><span>Red's Gym</span><span>·</span><span>Flex N Tone</span><span>·</span><span>Fight Factory Manchester</span><span>·</span><span>Oxigen Fitness</span><span>·</span><span>IronForge Bengaluru</span><span>·</span><span>Iron Forge Hyderabad</span><span>·</span><span>PowerHouse Hyderabad</span><span>·</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FRONTEND SHOWCASE — the system, on your screen ============ -->
+<section id="showcase" class="showcase">
+  <div class="container">
+    <div class="sec-head center">
+      <span class="kicker">See It Running</span>
+      <h2>Don't take our word for it. <span class="hl">Watch it work.</span></h2>
+      <p>A live look at the owner command center and the WhatsApp automations running inside every Gym OS install.</p>
+    </div>
+
+    <div class="sc-stage" data-ov-droplets="6" aria-label="Gym OS product preview">
+      <!-- laptop -->
+      <div class="sc-laptop">
+        <div class="sc-screen">
+          <aside class="sc-side">
+            <div class="sc-brand">Gym OS<small>by Beyond Pixells</small></div>
+            <div class="sc-nav on"><i></i>Dashboard</div>
+            <div class="sc-nav"><i></i>Gym OS Assistant</div>
+            <div class="sc-nav"><i></i>Members</div>
+            <div class="sc-nav"><i></i>Leads</div>
+            <div class="sc-nav"><i></i>Check-in</div>
+            <div class="sc-nav"><i></i>Passes</div>
+            <div class="sc-nav"><i></i>Payments</div>
+            <div class="sc-nav"><i></i>Plans</div>
+            <div class="sc-nav"><i></i>Classes</div>
+            <div class="sc-view">View website &#8594;</div>
+          </aside>
+          <div class="sc-main">
+            <div class="sc-appbar">
+              <span class="sc-branch">02 &#9662;</span>
+              <div class="r"><span class="sc-search"></span><span class="sc-bell"></span><span class="sc-ava">SS</span></div>
+            </div>
+            <div class="sc-content">
+              <div class="sc-dash">
+                <div><h4>Dashboard</h4><p>Overview of your gym's performance today</p></div>
+                <div class="sc-btns"><span class="sc-btn pri">+ Add Member</span><span class="sc-btn sec">+ Log Payment</span><span class="sc-btn sec">+ Add Lead</span></div>
+              </div>
+              <div class="sc-tabs"><span class="sc-tab on">Overview</span><span class="sc-tab">Staff Performance</span><span class="sc-tab">Reports</span></div>
+              <div class="sc-kpis">
+                <div class="sc-kpi"><span>Active members</span><b>486</b><em>+12 this week</em></div>
+                <div class="sc-kpi money"><span>Revenue this month</span><b>&#8377;1,84,500</b><em>+18% vs last month</em></div>
+                <div class="sc-kpi"><span>Leads this month</span><b>23</b><em>7 joined this week</em></div>
+                <div class="sc-kpi"><span>Check-ins today</span><b>84</b><em>peak in 40 min</em></div>
+              </div>
+              <div class="sc-cols">
+                <div class="sc-feed">
+                  <div class="sc-feed-h">Automation feed</div>
+                  <div class="sc-feed-items">
+                    <div class="sc-item"><i class="ok"></i><div><b>Payment received — Priya S.</b><span>&#8377;18,500 &middot; Annual Gold &middot; UPI</span></div></div>
+                    <div class="sc-item"><i class="wa"></i><div><b>Renewal link sent — Rahul M.</b><span>3 days before expiry &middot; WhatsApp</span></div></div>
+                    <div class="sc-item"><i class="ok"></i><div><b>QR check-in — Amit J.</b><span>Valid &middot; Day 12 streak</span></div></div>
+                    <div class="sc-item"><i class="wa"></i><div><b>New lead — Kavya R.</b><span>"Trial for cardio?" &middot; follow-up set 6 PM</span></div></div>
+                    <div class="sc-item"><i class="ai"></i><div><b>AI insight</b><span>4 members at churn risk &middot; win-back queued</span></div></div>
+                  </div>
+                </div>
+                <div class="sc-chart">
+                  <div class="sc-feed-h">Collections this week</div>
+                  <div class="sc-bars">
+                    <div style="--h:38%"><span>M</span></div>
+                    <div style="--h:52%"><span>T</span></div>
+                    <div style="--h:47%"><span>W</span></div>
+                    <div style="--h:64%"><span>T</span></div>
+                    <div style="--h:58%"><span>F</span></div>
+                    <div style="--h:81%"><span>S</span></div>
+                    <div style="--h:29%;--h2:45%"><span>S</span></div>
+                  </div>
+                  <div class="sc-note">Saturday peaks without a single reminder call</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sc-base"></div>
+      </div>
+
+      <!-- phone -->
+      <div class="sc-phone">
+        <div class="sc-notch"></div>
+        <div class="sc-wa-head"><span class="sc-wa-logo"></span>Gym OS<div class="sc-typing"><i></i><i></i><i></i></div></div>
+        <div class="sc-msgs">
+          <div class="sc-msg in">Hi Rahul &#128075; Your Gold membership expires tomorrow.<br><b>Renew in one tap:</b> gym-os.link/pay/rm2491</div>
+          <div class="sc-msg out">Done &#10003;</div>
+          <div class="sc-msg in last">&#8377;3,499 received &mdash; renewed for 3 months.<br>See you at 7 PM &#128170;</div>
+        </div>
+        <div class="sc-wa-foot">This happened at 11:42 PM. You were asleep.</div>
+      </div>
+
+      <!-- floating proof chips -->
+      <div class="sc-chip c1">&#128176; Auto-collected while you sleep</div>
+      <div class="sc-chip c2">&#128241; Members need zero new apps</div>
+      <div class="sc-chip c3">&#127919; Every lead followed up</div>
+    </div>
+    <p class="sc-cap">The Gym OS owner dashboard. Data shown is sample data.</p>
+  </div>
+</section>
+
+
+<!-- ======= ABOUT · what gym os is, in plain words ======= -->
+<section id="about">
+  <div class="container">
+    <div class="sec-head center">
+      <span class="kicker">About Gym OS</span>
+      <h2>One system instead of a register, a diary and four WhatsApp groups.</h2>
+      <p class="about-lead">Gym OS is a gym management platform built in India for Indian gyms. It is not a member app people have to download, and it is not an enterprise suite priced for chains. It is the four things a gym actually runs on — finally speaking to each other.</p>
+    </div>
+    <div class="sec-grid about-grid">
+      <div class="sec-card"><b>🌐 Your gym's website</b><p>Branded, SEO-ready, with every enquiry captured as a lead. Designed by Beyond Pixells — not a template subdomain.</p></div>
+      <div class="sec-card"><b>👥 The member system</b><p>Memberships, QR check-in, batches and expiry — the front desk runs on it, and expired members get caught at the door.</p></div>
+      <div class="sec-card"><b>💬 The WhatsApp engine</b><p>Renewal reminders with UPI links, welcomes, win-backs and birthday offers — sent automatically, before the month ends.</p></div>
+      <div class="sec-card"><b>📊 The owner dashboard</b><p>Collections, renewals, attendance and leads — live on your phone. You stop calling the desk to ask how today went.</p></div>
+    </div>
+    <div class="about-strip">
+      <div><b>Built for</b><span>Single-gym owners and small chains who manage from their phone, in rupees, on UPI.</span></div>
+      <div><b>Set up in</b><span>24 hours — we move your register, train your staff, and hand you the login.</span></div>
+      <div><b>Built by</b><span>Beyond Pixells, an Indian product studio that builds operating systems for local businesses.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="problem">
+  <div class="container">
+    <div class="sec-head center">
+      <span class="kicker">The Real Problem</span>
+      <h2>How much revenue walked out your gym door this month?</h2>
+      <p>Every gym leaks money the same way. Gym OS was built to close every leak.</p>
+    </div>
+    <div class="pain">
+      <div class="pain-card bp-spotlight-card"><span class="ico">💸</span><div><b>The fee-chasing awkwardness</b><p>15–20 members train past their expiry date every month because asking for money feels awkward. Nobody sends the reminder, so nobody pays.</p><span class="cost">₹35,000–₹70,000/year in unpaid dues</span></div></div>
+      <div class="pain-card bp-spotlight-card"><span class="ico">👻</span><div><b>The March ghosting</b><p>80% of January signups stop coming by March — and no one notices they missed 3 days in a row until they've already quit.</p><span class="cost">Every lost member = ₹10,000+/year gone</span></div></div>
+      <div class="pain-card bp-spotlight-card"><span class="ico">📒</span><div><b>The register roulette</b><p>Handwritten entries, Excel files, and a WhatsApp full of scattered enquiries. Nobody knows the real numbers until the month ends.</p><span class="cost">Hours lost daily at the front desk</span></div></div>
+      <div class="pain-card bp-spotlight-card"><span class="ico">📵</span><div><b>The blind owner</b><p>Calling the receptionist 5 times a day to ask "how many walk-ins today?" is not a management system. That's a leash.</p><span class="cost">You can't scale what you can't see</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <div class="sec-head">
+      <span class="kicker">How Gym OS Works</span>
+      <h2>Your gym, running itself in real time.</h2>
+      <p>One system replaces the register, the reminder-sending, the fee-chasing and the guesswork.</p>
+    </div>
+    <div class="bento">
+      <div class="b-card bp-lift bp-spotlight-card">
+        <span class="tag">Live</span>
+        <h3>Fees that collect themselves</h3>
+        <p>Automated WhatsApp payment links go out 3 days before expiry. UPI collects while you sleep.</p>
+        <div class="mock"><span class="who">Payment received — Priya S. (Annual Gold)</span><span class="amt">₹18,500 <span class="badge">UPI</span></span></div>
+      </div>
+      <div class="b-card bp-lift bp-spotlight-card">
+        <span class="tag">Live</span>
+        <h3>QR check-in in 2 seconds</h3>
+        <p>Members scan at the door — attendance, plan validity and streaks tracked automatically. No app download.</p>
+        <div class="mock"><span class="who">Rahul M. scanned in — Day 12 streak 🔥</span><span class="amt">Valid ✓</span></div>
+      </div>
+      <div class="b-card bp-lift bp-spotlight-card">
+        <span class="tag">Live</span>
+        <h3>Floor capacity, at a glance</h3>
+        <p>Live occupancy, trainer load and peak-hour heatmap — know your gym without being in it.</p>
+        <div class="gauge"><div class="ring" style="position:relative"><b>84/120</b></div><div class="lbl">Live floor capacity<br><b>Tue 7 PM</b> — peak approaching</div></div>
+      </div>
+      <div class="b-card bp-lift bp-spotlight-card">
+        <span class="tag">Live</span>
+        <h3>Every lead, captured &amp; followed</h3>
+        <p>Website, WhatsApp and walk-in enquiries land in one CRM with auto follow-ups, trial tracking and duplicate detection. No lead left cold.</p>
+        <div class="mock"><span class="who">New lead: Amit J. — "Full gym access?"</span><span class="amt">Follow-up set ✓</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <div class="sec-head center">
+      <span class="kicker">Everything Included</span>
+      <h2>32 modules. One system. Zero add-on fees.</h2>
+    </div>
+    <div class="feat">
+      <div class="f bp-lift"><span class="ico">💬</span><b>WhatsApp Automation</b><p>36 automation flows: renewals, reminders, welcomes, birthday offers, win-back campaigns — all on WhatsApp.</p></div>
+      <div class="f bp-lift"><span class="ico">🎯</span><b>Unified Lead Engine</b><p>Every enquiry — website, WhatsApp, walk-in — in one CRM with duplicate detection and consent tracking.</p></div>
+      <div class="f bp-lift"><span class="ico">🎟️</span><b>Trial Passes &amp; QR Check-in</b><p>Server-generated QR trial passes, duplicate-proof attendance, and member streak tracking.</p></div>
+      <div class="f bp-lift"><span class="ico">🧠</span><b>AI Insights</b><p>Churn-risk detection, at-risk member alerts and plain-language revenue summaries for the owner.</p></div>
+      <div class="f bp-lift"><span class="ico">📊</span><b>Owner Command Center</b><p>Revenue, collections, attendance, expenses and P&L on one dashboard — live, from your phone.</p></div>
+      <div class="f bp-lift"><span class="ico">🌐</span><b>Branded Website Included</b><p>Designed by Beyond Pixells, not a template subdomain. SEO-ready, lead-wired, yours to keep.</p></div>
+      <div class="f bp-lift"><span class="ico">📅</span><b>Classes &amp; Trainers</b><p>Class scheduling, trainer management, payroll, PT session tracking and commission splits.</p></div>
+      <div class="f bp-lift"><span class="ico">🔥</span><b>Retention Engine</b><p>Auto-detects absent members and sends motivational check-ins that bring them back before they quit.</p></div>
+      <div class="f bp-lift"><span class="ico">🇮🇳</span><b>Built for India</b><p>UPI, GST invoices, Hindi/Hinglish, festival offers, offline-tolerant, and priced in rupees.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="container">
+    <div class="sec-head">
+      <span class="kicker">Why Gym OS Wins</span>
+      <h2>Global software fails Indian gyms. We built the alternative.</h2>
+    </div>
+    <div class="vs-swipe"><table class="vs">
+      <tr><th></th><th>Their way (Glofox / Wellyx / Zen Planner)</th><th>Gym OS</th></tr>
+      <tr><td>Member experience</td><td class="them">Download a 100MB app, create an account, allow notifications</td><td class="us">Everything on WhatsApp — zero new apps</td></tr>
+      <tr><td>Pricing</td><td class="them">$99–$300+/month in USD, FX risk, per-member fee tiers</td><td class="us">Flat INR monthly, unlimited members, no dollar pricing</td></tr>
+      <tr><td>Your growth</td><td class="them">Software bill grows as you grow — you're penalized for success</td><td class="us">Flat fee. Growth never raises your bill</td></tr>
+      <tr><td>Your website</td><td class="them">Generic portal subdomain or nothing</td><td class="us">Custom branded website designed by our studio</td></tr>
+      <tr><td>Payments</td><td class="them">Card auto-debit built for US banks</td><td class="us">UPI-first, QR payment links, WhatsApp payment reminders</td></tr>
+      <tr><td>Setup</td><td class="them">Self-serve onboarding, you do the data entry</td><td class="us">We transfer your register within 24 hours — or you pay nothing</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="sec-head center">
+      <span class="kicker">Pricing</span>
+      <h2>Retain 2 members a month. Gym OS pays for itself.</h2>
+      <p>Flat monthly pricing, unlimited members, GST invoice included. One-time setup covers your branded website, data transfer and staff training.</p>
+    </div>
+    <div class="price">
+      <div class="tier bp-spotlight-card">
+        <h3>Starter</h3>
+        <div class="who">Single gym, going digital</div>
+        <div class="amt">₹999<span>/mo</span></div>
+        <div class="per">+ ₹4,999 one-time setup · billed monthly</div>
+        <div class="payback">≈ ₹33/day — less than one missed fee</div>
+        <ul>
+          <li>Branded website with lead capture</li>
+          <li>Member management + QR check-in</li>
+          <li>WhatsApp renewal reminders</li>
+          <li>Lead CRM + trial passes</li>
+          <li>Owner dashboard</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/917737077479?text=Hi!%20I'm%20interested%20in%20Gym%20OS%20Starter." >Start on WhatsApp</a>
+      </div>
+      <div class="tier hot bp-lift bp-spotlight-card">
+        <span class="pop">MOST GYMS PICK THIS</span>
+        <h3>Growth</h3>
+        <div class="who">Established gym, focused on retention</div>
+        <div class="amt">₹1,999<span>/mo</span></div>
+        <div class="per">+ ₹9,999 one-time setup · billed monthly</div>
+        <div class="payback">Retain 2 members/month and it's free</div>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Full WhatsApp automation suite (36 flows)</li>
+          <li>AI churn-risk radar + retention engine</li>
+          <li>Classes, trainers &amp; payroll</li>
+          <li>UPI payment collection + GST invoices</li>
+          <li>Expense &amp; P&amp;L tracking</li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/917737077479?text=Hi!%20I'm%20interested%20in%20Gym%20OS%20Growth." >Book Free Demo</a>
+      </div>
+      <div class="tier bp-spotlight-card">
+        <h3>Chain</h3>
+        <div class="who">Multi-branch, scaling fast</div>
+        <div class="amt">Custom</div>
+        <div class="per">Per-property pricing</div>
+        <div class="payback">Consolidated chain reporting</div>
+        <ul>
+          <li>Everything in Growth</li>
+          <li>Multi-branch command center</li>
+          <li>Branch benchmarking &amp; rollups</li>
+          <li>Dedicated support line</li>
+          <li>Custom automation builds</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/917737077479?text=Hi!%20I%20run%20a%20gym%20chain%20—%20let's%20talk." >Talk to the Studio</a>
+      </div>
+    </div>
+    <p class="pricing-note">Prices exclusive of GST. No lock-in — cancel anytime with 30 days' notice. Custom domain and hosting included from setup.</p>
+  </div>
+</section>
+
+
+  <!-- ======= GALLERY · product photos ======= -->
+  <section id="gallery">
+    <div class="container">
+      <div class="sec-head center">
+        <span class="kicker">The Product, In Pictures</span>
+        <h2>See exactly what you get.</h2>
+        <p>No stock photos. These are the real Gym OS interfaces — the dashboard you'll open every morning, the WhatsApp messages your members receive, the check-in your desk staff runs.</p>
+      </div>
+      <div class="gal">
+        <figure><img src="assets/collateral/mockup-owner-dashboard.jpg" alt="Gym OS owner dashboard with revenue, members, renewals and automation feed" loading="lazy"><figcaption><b>Owner command dashboard</b>Live revenue, active members, renewal pipeline and the WhatsApp automation feed — one glance every morning. (Sample data)</figcaption></figure>
+        <figure><img src="assets/collateral/mockup-whatsapp-automation.jpg" alt="WhatsApp automation thread with renewal reminder and UPI payment link" loading="lazy"><figcaption><b>WhatsApp automation</b>Renewal reminders with instant UPI links, sent before expiry, paid in two taps — receipts delivered automatically. (Sample data)</figcaption></figure>
+        <figure><img src="assets/collateral/mockup-qr-checkin.jpg" alt="QR check-in desk scanner with member validation" loading="lazy"><figcaption><b>QR check-in counter</b>Members scan and enter in a second. Expired memberships get caught at the door — renewal link already sent. (Sample data)</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= KIT · brochure + guide + partner ======= -->
+  <section id="kit">
+    <div class="container">
+      <div class="sec-head center">
+        <span class="kicker">The Owner's Kit</span>
+        <h2>Take it with you. Read it before you decide.</h2>
+        <p>The same material we present in demos — honest, no hype, printable. Share it with a partner or manager. Pricing is simple and flat; we'll walk you through it on the call.</p>
+      </div>
+      <div class="kit">
+        <a class="kcard" href="assets/collateral/gym-owner-brochure.pdf" target="_blank" rel="noopener">
+          <span class="file"></span>
+          <span><b>Gym Owner Brochure</b><span>The complete offer on one page — every module, what's included, how the automations work. A4 print-ready.</span></span>
+        </a>
+        <a class="kcard" href="assets/collateral/gym-owner-guide.pdf" target="_blank" rel="noopener">
+          <span class="file"></span>
+          <span><b>The Gym Owner's Guide</b><span>A practical playbook: the four profit leaks of running a gym, and a day running on Gym OS — morning to close.</span></span>
+        </a>
+      </div>
+      <div class="partner-strip">
+        <div>
+          <span class="pk-badge">● For gym setup companies &amp; equipment manufacturers</span>
+          <h3>Refer gyms. Earn on every one.</h3>
+          <p>Add a software revenue line to your setup business: introduce Gym OS to your gym clients and earn commission on every closed deal — while we build, onboard and support everything digital.</p>
+        </div>
+        <div class="pk-cta">
+          <a class="btn btn-ghost" href="assets/collateral/partner-onepager.pdf" target="_blank" rel="noopener">Partner one-pager (PDF)</a>
+          <a class="btn btn-primary wa" href="https://wa.me/917737077479?text=Hi!%20I%20am%20a%20gym%20setup%20or%20equipment%20company%20and%20want%20to%20discuss%20the%20Gym%20OS%20partner%20program.">WhatsApp us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======= SECURITY · data & trust ======= -->
+  <section id="security">
+    <div class="container">
+      <div class="sec-head center">
+        <span class="kicker">Security &amp; Trust</span>
+        <h2>Your members' data. Protected like it's ours.</h2>
+        <p>You're handing us your gym's most valuable asset — your member list. Here's exactly how we treat it.</p>
+      </div>
+      <div class="sec-grid">
+        <div class="sec-card"><b>Your data stays yours</b><p>Every member record, payment and lead is exportable anytime — no lock-in, no hostage data. Leave and you leave with everything.</p></div>
+        <div class="sec-card"><b>Separated per gym</b><p>Each gym runs in its own account with its own members, staff and branches. Your data is never mixed with another gym's.</p></div>
+        <div class="sec-card"><b>DPDP-aligned consent</b><p>Consent is captured at every lead form and member touchpoint, in line with India's Digital Personal Data Protection Act.</p></div>
+        <div class="sec-card"><b>A signed agreement, in writing</b><p>Every gym gets a written data processing agreement before go-live — your legal protection under DPDP Sec 8(2), not a verbal promise.</p></div>
+        <div class="sec-card"><b>Role-based access</b><p>Owners see money and reports. Desk staff see check-ins and leads. Nobody sees more than their role requires.</p></div>
+        <div class="sec-card"><b>Payments over UPI rails</b><p>Members pay via UPI directly — we never hold or touch your money. Fees settle to your account, your ledger stays the source of truth.</p></div>
+      </div>
+      <p class="sec-note">Have a specific security question for your IT or legal team? Ask on the demo call — we'll answer in writing.</p>
+    </div>
+  </section>
+
+<section id="faq">
+  <div class="container">
+    <div class="sec-head center">
+      <span class="kicker">Objections, Answered</span>
+      <h2>The questions every gym owner asks.</h2>
+    </div>
+    <div class="faq">
+      <div class="q"><b>"My staff isn't technical."</b><p>Gym OS runs where your staff already lives: WhatsApp and a browser. Check-in is one scan. We train your front desk in one call — and we do the data entry for you.</p></div>
+      <div class="q"><b>"I already use a register and Excel."</b><p>Perfect — send us a photo of your register and we'll transfer your entire member base into Gym OS within 24 hours, or you pay nothing for setup. Keep the register as backup; you'll stop using it on your own.</p></div>
+      <div class="q"><b>"There's cheaper software out there."</b><p>That ₹2,000 'lifetime' software doesn't send WhatsApp reminders, can't collect UPI, and has no support. It costs you ₹50,000+ a year in lost renewals. Gym OS pays for itself by saving 2 members a month.</p></div>
+      <div class="q"><b>"What about my data?"</b><p>Your data is yours. Every record is exportable anytime, and your members' details stay in your gym's system — with consent captured at every lead form, per India's DPDP Act.</p></div>
+      <div class="q"><b>"Will my members actually use it?"</b><p>They don't have to 'adopt' anything. No app downloads. Reminders, QR passes, receipts and plans arrive on WhatsApp — which they check 50 times a day already.</p></div>
+      <div class="q"><b>"What if I need something custom?"</b><p>We're a product studio, not a reseller. Need a custom report, a festival campaign flow, or an integration? We build it — and the best requests become features for every gym on Gym OS.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="demo">
+  <div class="container">
+    <h2>The gym across the street is auto-renewing members on WhatsApp. Are you still making calls?</h2>
+    <p>Book a free demo — we'll show you your own gym running on Gym OS, live, before you pay a rupee.</p>
+    <div class="ctas" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-wa" href="https://wa.me/917737077479?text=Hi!%20Book%20me%20a%20free%20Gym%20OS%20demo." >Chat on WhatsApp Now</a>
+      <a class="btn btn-ghost" href="#showcase" >See It In Action</a>
+    </div>
+    <form class="gform" id="gym-lead-form" novalidate>
+      <input type="text" name="name" placeholder="Your name" required maxlength="120">
+      <input type="tel" name="phone" placeholder="Phone (WhatsApp)" required maxlength="20">
+      <input type="text" name="city" placeholder="City" maxlength="80">
+      <input type="text" name="gym" placeholder="Gym name" maxlength="160">
+      <label class="gconsent"><input type="checkbox" name="consent" required> I agree to be contacted on WhatsApp about the demo.</label>
+      <span class="gerr" id="gform-err">Please enter your name and a valid phone number.</span>
+      <button class="btn btn-primary" type="submit">Get my free demo →</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <a class="brand" href="#top"><img src="logo.png" alt="Gym OS">Gym OS</a>
+        <p>The complete operating system for Indian gyms — by Beyond Pixells, the studio that builds operating systems for local businesses.</p>
+      </div>
+      <div class="f-col"><b>Product</b>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="f-col"><b>OS Family</b>
+        <a href="https://somilsharma2000.github.io/beyond-pixells/">Beyond Pixells</a>
+        <a href="https://somilsharma2000.github.io/dentist-os-site/">Dentist OS</a>
+        <a href="https://somilsharma2000.github.io/builder-os-site/">Builder OS</a>
+        <a href="https://somilsharma2000.github.io/beyond-pixells/blog/">Blog</a>
+      </div>
+      <div class="f-col"><b>Studio</b>
+        <a href="https://wa.me/917737077479">WhatsApp us</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 Beyond Pixells. All rights reserved.</span>
+      <span>Built for Indian gyms — Tier 1, 2 and 3.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://somilsharma2000.github.io/beyond-pixells/assets/bp-motion.js"></script>
+<script src="https://somilsharma2000.github.io/beyond-pixells/assets/bp-obsidian-veins.js"></script>
+<script>
+(function(){
+  var f=document.getElementById('gym-lead-form');
+  if(!f)return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(n){var el=f.elements[n];return el?el.value.trim():'';};
+    var err=document.getElementById('gform-err');
+    if(!v('name')||v('name').length<2||!/^[+\d][\d\s\-()]{6,18}$/.test(v('phone'))){err.style.display='block';return;}
+    err.style.display='none';
+    var msg="Hi! I run a gym and want a free Gym OS demo.\nName: "+v('name')+"\nCity: "+(v('city')||'-')+"\nGym: "+(v('gym')||'-')+"\nPhone: "+v('phone');
+    var btn=f.querySelector('button[type=submit]');
+    btn.disabled=true;btn.innerText='Sending…';
+    fetch('/api/lead',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name:v('name'),phone:v('phone'),city:v('city'),business:v('gym'),interest:'Gym OS free demo'})
+    }).then(function(r){return r.json();}).then(function(j){
+      if(j&&j.ok){
+        f.innerHTML='<p class="gok">Done — your free demo is booked in our system.<br>We will reach out on WhatsApp today. Prefer to talk right now? <a href="https://wa.me/917737077479?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Continue on WhatsApp →</a></p>';
+      }else{
+        f.innerHTML='<p class="gok">Our system is briefly unreachable — no lead lost.<br>Continue right now on WhatsApp: <a href="https://wa.me/917737077479?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Send my demo request →</a></p>';
+      }
+    }).catch(function(){
+      f.innerHTML='<p class="gok">Our system is briefly unreachable — no lead lost.<br>Continue right now on WhatsApp: <a href="https://wa.me/917737077479?text='+encodeURIComponent(msg)+'" target="_blank" rel="noopener">Send my demo request →</a></p>';
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var bar=document.getElementById('sticky-cta');
+  if(!bar)return;
+  var shown=false;
+  window.addEventListener('scroll',function(){
+    var past=window.scrollY>520;
+    var atForm=document.querySelector('#demo').getBoundingClientRect().top<window.innerHeight*0.5;
+    var should=past&&!atForm;
+    if(should!==shown){shown=should;bar.classList.toggle('show',should);}
+  },{passive:true});
+})();
+</script>
+<script src="https://somilsharma2000.github.io/beyond-pixells/assets/bp-effects-kit.js"></script>
+</body>
+</html>
