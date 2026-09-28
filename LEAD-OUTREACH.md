@@ -54,3 +54,18 @@ Send from the business number (+91 77370 77479), 10 per day max. Personalized me
 
 **10. Body Beast Gym**
 > Hi, is this Body Beast Gym? I'm Deekshant from Beyond Pixels. Came across your gym — two branches and 487+ reviews — real growth. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
+
+## Warm-target DM scripts (Instagram engagers)
+
+Someone who likes/comments our content twice, or follows after a post, gets ONE personal DM. Never pitch in message 1.
+
+**Script 1 — engaged on a check-in post:**
+> Hey {name}, thanks for the love on the post! Quick one — is {their gym/business} on QR check-ins yet or still the register life? Curious how you handle peak-hour queues.
+
+**Script 2 — engaged on a renewal/retention post:**
+> Hi {name}! Noticed you liked the retention post. Honest question — what's your follow-up system like when a member goes quiet for 2 weeks? We see that one break most gyms.
+
+**Script 3 — new follower with gym in bio:**
+> Hey! Welcome aboard 🙌 Saw you run {gym}. Always up to talk shop about gym ops — if you ever want a sanity check on your renewal or lead process, my DMs are open.
+
+Rule: one DM, one soft question, then wait. Never stack messages.
