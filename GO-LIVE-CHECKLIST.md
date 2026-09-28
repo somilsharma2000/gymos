@@ -3,7 +3,9 @@
 **Live product:** https://gym-os-app.vercel.app (marketing + console)
 **Pages mirror:** https://somilsharma2000.github.io/gym-os
 **This repo** (`gymos`) is superseded as a codebase — it now hosts the tracked
-go-live checklist for the Gym OS launch. Check items off as they land.
+go-live checklist for the Gym OS launch. The **go-live-watch workflow**
+(.github/workflows/go-live-watch.yml) re-verifies every 6 hours and ticks
+boxes automatically as each item lands.
 
 > Repo map (don't get lost):
 > - `gym-os-app` — the live marketing site + ops console (Vercel)
@@ -11,23 +13,35 @@ go-live checklist for the Gym OS launch. Check items off as they land.
 > - `gym-os` — GitHub Pages mirror target (auto-deployed by the pages-mirror workflow)
 > - `gymos` (this repo) — retired first rewrite; hosts this checklist
 
+## Live status
+
+<!-- status:start -->
+_Auto-updated by the go-live-watch workflow (every 6 h). Last check: **2026-09-28 21:08 UTC**_
+
+| Surface | State |
+|---|---|
+| Marketing app | **UP** |
+| Pages mirror | **UP** |
+| gymos.in DNS A | unresolved |
+| gymos.in traffic | old Hostinger site |
+| GA4 | not connected |
+| Testimonials | no quotes yet |
+<!-- status:end -->
+
 ---
 
 ## 1. gymos.in domain migration  `owner action — needs Hostinger + Vercel panels`
 
 Current state: `gymos.in` still serves the **old Hostinger static site**
-(last modified Sep 2, 2026 — title "GymOS: Gym Management & Software").
-The real app is live at `gym-os-app.vercel.app` and verified green.
+(title "GymOS: Gym Management & Software"). The real app is live at
+`gym-os-app.vercel.app` and verified green.
 
-- [ ] **Hostinger hPanel → DNS Zone** — add:
-  | Type  | Name | Value                 |
-  |-------|------|-----------------------|
-  | A     | `@`  | `76.76.21.21`         |
-  | CNAME | `www`| `cname.vercel-dns.com`|
-- [ ] **Vercel → gym-os-app project → Settings → Domains** — add `gymos.in` and `www.gymos.in`
-- [ ] **Set env var** on the same Vercel project: `NEXT_PUBLIC_SITE_URL=https://gymos.in`
-  (code already reads this — flips canonical URLs, OG tags and sitemap atomically; no code change needed)
-- [ ] Verify after propagation:
+- [ ] <!-- watch:dns-a -->**Hostinger hPanel → DNS Zone** — add: `A @ 76.76.21.21`
+- [ ] <!-- watch:dns-cname -->**Hostinger hPanel → DNS Zone** — add: `CNAME www → cname.vercel-dns.com`
+- [ ] <!-- watch:vercel-domain -->**Vercel → gym-os-app project → Settings → Domains** — add `gymos.in` and `www.gymos.in`
+- [ ] <!-- watch:site-url -->**Set env var** `NEXT_PUBLIC_SITE_URL=https://gymos.in` on the Vercel gym-os-app project
+      (code already reads this — flips canonical URLs, OG tags and sitemap atomically)
+- [ ] **Verify after propagation** (the watch workflow also checks these continuously):
   ```bash
   curl -s https://gymos.in/ | grep -c 917737077479   # must be ≥ 1
   curl -s -o /dev/null -w "%{http_code}" https://gymos.in/privacy  # must be 200
@@ -39,10 +53,10 @@ The real app is live at `gym-os-app.vercel.app` and verified green.
 The site ships GA4 support that is **dormant until the env var is set**.
 CSP is already configured (commit `afdd81c`) to allow gtag + the collect beacon.
 
-- [ ] Google Analytics → Admin → **Create Property** → Web → name it, use `https://gymos.in`
-- [ ] Copy the `G-XXXXXXXXXX` measurement ID
-- [ ] Set env var on the Vercel gym-os-app project: `NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX`
-- [ ] Verify: GA Realtime report shows a live visit after browsing the site
+- [ ] **Google Analytics → Admin → Create Property** → Web → name it, use `https://gymos.in`
+- [ ] **Copy the `G-XXXXXXXXXX` measurement ID**
+- [ ] <!-- watch:ga-id -->**Set env var** `NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX` on the Vercel gym-os-app project
+- [ ] **Verify:** GA Realtime report shows a live visit after browsing the site
 
 ## 3. Customer quotes → testimonials  `owner action — needs real client quotes`
 
@@ -50,9 +64,9 @@ The home page has a Testimonials section that **renders only when real quotes
 exist** in `gym-os-app/src/lib/testimonials.ts`. No invented social proof is
 shipped by design.
 
-- [ ] Collect 2–3 real quotes, each with: name, gym name, city, 1–2 sentence result, optional metric
-- [ ] Paste them to the agent in chat, or edit `src/lib/testimonials.ts` and open a PR
-- [ ] Verify: `/` renders the quotes section
+- [ ] **Collect 2–3 real quotes** — each with: name, gym name, city, 1–2 sentence result, optional metric
+- [ ] <!-- watch:quotes -->**Add them** — paste to the agent in chat, or edit `src/lib/testimonials.ts` and open a PR
+- [ ] **Verify:** `/` renders the quotes section
 
 ---
 
