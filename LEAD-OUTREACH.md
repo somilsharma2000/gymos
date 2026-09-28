@@ -26,34 +26,34 @@ Top 10 are all Hyderabad gyms with 4.7-4.9 ratings and 480-1,100 reviews, **none
 Send from the business number (+91 77370 77479), 10 per day max. Personalized message 1 = curiosity, not pitch. If they answer, the nurture sequence in GROWTH-ENGINE.md §2.3 takes over.
 
 **1. Retro Fit Gym**
-> Hi, is this Retro Fit Gym? I'm Deekshant from Beyond Pixels. Came across your gym — 1,100+ Google reviews at 4.8 stars — that's genuinely rare for a gym. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
+> Hi, is this Retro Fit Gym? I'm Deekshant from Beyond Pixells. Came across your gym — 1,100+ Google reviews at 4.8 stars — that's genuinely rare for a gym. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
 
 **2. A2 Fit Gym**
-> Hi, is this A2 Fit Gym? I'm Deekshant from Beyond Pixels. Came across your gym — 913 reviews at 4.9 — honestly one of the best-rated gyms I've seen in Hyderabad. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
+> Hi, is this A2 Fit Gym? I'm Deekshant from Beyond Pixells. Came across your gym — 913 reviews at 4.9 — honestly one of the best-rated gyms I've seen in Hyderabad. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
 
 **3. Jaguar Gym**
-> Hi, is this Jaguar Gym? I'm Deekshant from Beyond Pixels. Came across your gym — 763 reviews and a strong community vibe from what I see online. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
+> Hi, is this Jaguar Gym? I'm Deekshant from Beyond Pixells. Came across your gym — 763 reviews and a strong community vibe from what I see online. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
 
 **4. Ravv Fitness Club**
-> Hi, is this Ravv Fitness Club? I'm Deekshant from Beyond Pixels. Came across your gym — 4.9 stars — that kind of consistency doesn't happen by accident. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
+> Hi, is this Ravv Fitness Club? I'm Deekshant from Beyond Pixells. Came across your gym — 4.9 stars — that kind of consistency doesn't happen by accident. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
 
 **5. Lean Fitness Studio**
-> Hi, is this Lean Fitness Studio? I'm Deekshant from Beyond Pixels. Came across your gym — a 4.9 rating with 560+ reviews — members clearly love the place. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
+> Hi, is this Lean Fitness Studio? I'm Deekshant from Beyond Pixells. Came across your gym — a 4.9 rating with 560+ reviews — members clearly love the place. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
 
 **6. F5 Fitness Pro**
-> Hi, is this F5 Fitness Pro? I'm Deekshant from Beyond Pixels. Came across your gym — the reviews for F5 Fitness Pro are outstanding. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
+> Hi, is this F5 Fitness Pro? I'm Deekshant from Beyond Pixells. Came across your gym — the reviews for F5 Fitness Pro are outstanding. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
 
 **7. King Fitness Gym**
-> Hi, is this King Fitness Gym? I'm Deekshant from Beyond Pixels. Came across your gym — your reputation in Kukatpally speaks for itself. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
+> Hi, is this King Fitness Gym? I'm Deekshant from Beyond Pixells. Came across your gym — your reputation in Kukatpally speaks for itself. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
 
 **8. Banda's Fitness World**
-> Hi, is this Banda's Fitness World? I'm Deekshant from Beyond Pixels. Came across your gym — 520+ reviews at 4.8 — impressive consistency. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
+> Hi, is this Banda's Fitness World? I'm Deekshant from Beyond Pixells. Came across your gym — 520+ reviews at 4.8 — impressive consistency. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
 
 **9. Celebrity Strength Gym**
-> Hi, is this Celebrity Strength Gym? I'm Deekshant from Beyond Pixels. Came across your gym — the name and the 500+ reviews both live up to each other. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
+> Hi, is this Celebrity Strength Gym? I'm Deekshant from Beyond Pixells. Came across your gym — the name and the 500+ reviews both live up to each other. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
 
 **10. Body Beast Gym**
-> Hi, is this Body Beast Gym? I'm Deekshant from Beyond Pixels. Came across your gym — two branches and 487+ reviews — real growth. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
+> Hi, is this Body Beast Gym? I'm Deekshant from Beyond Pixells. Came across your gym — two branches and 487+ reviews — real growth. Quick question from one builder to another: how do you currently track renewals and check-ins? Register, Excel, or an app?
 
 ## Warm-target DM scripts (Instagram engagers)
 

@@ -1,4 +1,4 @@
-# Beyond Pixels — Growth Engine (v2)
+# Beyond Pixells — Growth Engine (v2)
 
 **Goal:** paying Gym OS clients, on repeat, with the minimum manual work.
 **This is the operating manual. The agent runs the machine; the owner spends ~30 min/day on human-only steps.**

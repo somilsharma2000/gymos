@@ -1,4 +1,4 @@
-# Beyond Pixels — Agency Playbook
+# Beyond Pixells — Agency Playbook
 
 **The standard: a top-2% social media agency, executed by one agent.**
 Everything the agency knows, in one place. Companion to `GROWTH-ENGINE.md` (funnel math,
@@ -12,7 +12,7 @@ pricing, outreach). This file is the craft: platforms, content, growth tactics, 
 |---|---|
 | Instagram | Token broken (malformed) — publishing blocked until owner re-auths. Profile has our published posts from late Aug/Sep. |
 | Facebook page | Reachable, publish-capable. **0 followers.** Category mislabeled "Social Media Agency" (should be Software Company). Can't read comments (missing permission). |
-| LinkedIn | Working. Org "Beyond pixells" — **name uses old spelling**, must be "Beyond Pixels". Founder token active. |
+| LinkedIn | Working. Org "Beyond pixells" — **name uses old spelling**, must be "Beyond Pixells". Founder token active. |
 | Content engine | 16 posts queued Sep 29 – Oct 5 (14 IG/FB + 2 LI). Brand generator + reel frames ready. |
 | Automation | IG/FB + LI publishers active; engagement+monitor routine 2x daily; daily scorecard 9 PM; weekly analytics Mon. |
 
@@ -24,7 +24,7 @@ outreach (the 174 leads) — content compounds later. This playbook is built for
 
 ## 1. Brand voice (never deviate)
 
-- **Who we are:** Beyond Pixels — full-service SaaS & web technology company.
+- **Who we are:** Beyond Pixells — full-service SaaS & web technology company.
   Gym OS is the flagship. We speak as builders, not marketers.
 - **Tone to gym owners:** peer-to-peer, zero condescension. We know their pain
   (renewals, no-shows, registers) better than they can articulate it.
@@ -131,6 +131,6 @@ If a phase misses by >50%, the diagnosis order is always: hook quality → posti
 
 1. **Instagram: reconnect the token** (Meta) — blocks half the publishing reach + all IG monitoring.
 2. **Facebook page: change category** "Social Media Agency" → "Software Company" + set CTA button to WhatsApp.
-3. **LinkedIn org: rename** "Beyond pixells" → "Beyond Pixels" (consistency = credibility).
+3. **LinkedIn org: rename** "Beyond pixells" → "Beyond Pixells" (consistency = credibility).
 4. **Deekshant: reshare** each company post from his personal LinkedIn.
 5. gymos.in DNS + GA4 + first client quotes → see `GO-LIVE-CHECKLIST.md`.
