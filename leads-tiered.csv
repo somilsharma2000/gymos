@@ -1,0 +1,328 @@
+tier,source,name,category,city,area,address,country,phone,email,website,rating,reviews,instagram,quality,notes
+A,hyderabad,21st Century Gym,,Hyderabad,Saroornagar,"2nd Floor, Road No. 1, Sri Venkateshwara Colony, 500035",India,8712628399,,No,4.7,126,@21stcenturygym_hyd,HIGH,126 reviews
+A,hyderabad,300 The Gym,,Hyderabad,KPHB,"Near Pavan Tea Corner, JNTU Road, KPHB Phase 1",India,9849030000 / 9000030099,,No,4.7,250+,@300thegym_kphb,MED,Budget gym high volume
+A,hyderabad,6 Pack Gym & Cardio,,Hyderabad,Chaitanyapuri,"Beside Ramalayam Temple, Chaitanyapuri, 500060",India,9849024056,,No,4.4,120+,@6packgym_chaitanyapuri,MED,Medium
+A,hyderabad,A2 Fit Gym,,Hyderabad,KPHB,"Above Green Trends Saloon, Dharama Reddy Colony, KPHB Phase 2",India,9333234999 / 9121234999,,No,4.9,913+,@a2fit_kphb,HIGH,913 reviews!
+A,jharkhand,AH Fitness,,Ranchi,Hinoo,"Bodhraj Complex, beside Eyelex Cinema, Hinoo, Ranchi",India,7209665088 / 9386571519,,No,-,-,@ahfitnessranchi,HIGH,Premium independent
+A,jharkhand,Absolute Gym,,Jamshedpur,Sakchi,"3rd Floor, Bindal Mall, Marine Drive Rd, Ashiana Gardens, Jamshedpur",India,9431040898 / 8298839999,,No,-,-,-,HIGH,Well-known gym
+A,jharkhand,Addiction Fitness (Mango),,Jamshedpur,Mango,"Rd.no-01, Azad Nagar, Mango, Jamshedpur",India,7903357014,,No,-,-,@addictionfitness_mango,HIGH,2nd branch CrossFit
+A,jharkhand,Addiction Fitness (Sakchi),,Jamshedpur,Sakchi,"5th Floor, The Galleria Mall, Sakchi, Jamshedpur, 831001",India,9693269215 / 7903357014,,No,-,-,@addictionfitness_mango,HIGH,Sakchi's biggest gym
+A,global,Akaay Fitness Bhopal,Independent Gym,Bhopal,,,India,+917725826609,,,4.7,45,https://instagram.com/akaayfitness,,
+A,global,Alpha Fit Nagpur,Independent Gym,Nagpur,,,India,+919527954803,,,4.5,40,https://instagram.com/alpha_fit_nagpur,,
+A,global,Alpha Gym Patna,Independent Gym,Patna,,,India,+918271049016,,,4.5,55,,,
+A,hyderabad,Anchor Strength,,Hyderabad,Boduppal,"Rooftop, Thotakura Achaiah Complex, Near Uppal Cricket Stadium",India,9379066066 / 7989458980,,No,-,-,@anchorstrengthofficial,HIGH,Calisthenics + MMA
+A,global,AntimatterFit Ajmer,Independent Gym,Ajmer,,,India,+919375855955,,,4.6,40,,,
+A,global,Apna Dream Gym Bhopal,Independent Gym,Bhopal,,,India,+917049933323,,,4.5,30,,,
+A,hyderabad,Ar Styrke Fitness,,Hyderabad,Gachibowli,"Behind US Consulate Road, Gachibowli / Gowlidoddy, 500032",India,9831130003,,No,5.0,140+,@ar_styrke_fitness,HIGH,5.0 rating
+A,global,Arnold Fitness Club Udaipur,Independent Gym,Udaipur,,,India,+919509759922,,,4.5,30,,,
+A,global,Arth Gym Udaipur,Independent Gym,Udaipur,,,India,+918559855945,,,4.6,50,,,
+A,global,Athletic Gym Jodhpur,Independent Gym,Jodhpur,,,India,+919602100698,,,4.6,55,,,
+A,hyderabad,Banda's Fitness World,,Hyderabad,Tarnaka,"Street No. 1, Tarnaka, 500007",India,7330970333 / 04027003333,,No,4.8,520+,@bandasfitnessworld_tarnaka,HIGH,520+ reviews!
+A,global,Baron Fitness Gym Patna,Independent Gym,Patna,,,India,+917282841111,,,4.6,70,,,
+A,hyderabad,Battle Fitness,,Hyderabad,Malkajgiri,"Opp. Andhra Bank, Above Bajaj Showroom, New Mirjalguda, 500047",India,9000055611,,No,4.9,180+,@battlefitness.in,HIGH,High rating
+A,hyderabad,Berlin Fitness,,Hyderabad,Gachibowli,"Opp. Le Meridien Hotel, Above Coalspark Restaurant, 500032",India,8008212345,,No,4.3,245+,@berlin_fitness_gym,MED,Medium rating
+A,hyderabad,Body Beast Gym,,Hyderabad,Kukatpally,"Sumitra Nagar Colony, Vijaya Residency Road, Kukatpally, 500072",India,9966000616 / 9959959444,,No,4.7,487+,@bodybeast_gym,HIGH,Warehouse gym 2 branches
+A,global,BodyWorks Gym & Spa Kharar,Independent Gym,Chandigarh,,,India,+917688000078,,,4.5,60,,,
+A,global,BodyZone Fitness Chandigarh,Independent Gym,Chandigarh,,,India,+916306083888,,,4.7,120,,,
+A,global,Box To Fit Chandigarh,MMA/Combat Sports,Chandigarh,,,India,+919522600040,,,4.8,45,,,
+A,hyderabad,Celebrity Strength Gym,,Hyderabad,LB Nagar,"Sri Nilayam, Road No. 1, Suryodaya Colony, 500074",India,9052222690 / 9912412817,,No,4.8,514,@celebritystrengthgym,HIGH,514 reviews
+A,dausa,Champion Gym,,Dausa,Dausa City,"Agra Rd, near Pinky Hotel, Sector 1, Ashok Nagar, Dausa 303303",India,9672994362,,,4.8,-,Starter,Highly rated on Gatimann,
+A,hyderabad,Chandu Fitness Gym,,Hyderabad,Pragathi Nagar,"Plot No 77/2, Near Jawahar Nagar, 500090",India,7387658447,,No,4.8,27+,@chandu_fitness_gym,LOW,Small gym
+A,jharkhand,City Fitness Gym (Lalpur),,Ranchi,Lalpur/Kanke Road,"7th Floor, Panchratna Centre, Near CMPDI, Kanke Road, Ranchi",India,9241766501,,No,-,-,@city_fitness_lalpur,HIGH,Multiple branches
+A,hyderabad,Cloud Fitness,,Hyderabad,Kondapur,"Kondapur / Gachibowli, 500084",India,7382525777,,No,4.4,236+,-,MED,Medium rating
+A,global,Club 72 Mohali,Strength & Conditioning,Chandigarh,,,India,+911725005333,,,4.7,55,,,
+A,global,Combat Academy Kochi,MMA/Combat Sports,Kochi,,,India,+919895067890,,,4.6,40,,,
+A,jharkhand,CoreX360 Gym,,Bokaro,Sector 1,"Sector 1, Near Ram Mandir, 2nd Floor, Above SBI, Bokaro Steel City",India,9939036919 / 7319742490,,No,-,-,@core.x.360,HIGH,Active Instagram
+A,global,CrossFit Jodhpur,CrossFit Box,Jodhpur,,,India,+919828350520,,,4.8,45,,,
+A,hyderabad,Crunch Gym,,Hyderabad,Kondapur,"5th & 6th Floors, Sai Sigma-1, Camelot Layout, 500084",India,9154051995 / 8956300300,,No,4.9,313+,@crunch.kondapur,HIGH,313 reviews
+A,hyderabad,D Cross Gym,,Hyderabad,Dilsukhnagar,"4th Floor, Above Zudio, Gaddiannaram, 500060",India,9666881553 / 9985033366,,No,4.8,62+,@dcross_gym,HIGH,Good rating
+A,hyderabad,Daksha Fitness Studio,,Hyderabad,Habsiguda,"Habsiguda Cross Road, Hotel Suprabath, 500007",India,9000983178 / 9848690045,,No,-,287,@daksha_fitness_studio,HIGH,287 reviews
+A,hyderabad,Dream Fitness Gym,,Hyderabad,Kompally,Kompally / Petbasheerabad / Alwal,India,9515352222,,No,-,-,@dream_fitness_gym,HIGH,Crossfit
+A,jharkhand,Dream Physique Gym,,Bokaro,Sector 1,"Sector 1, Bokaro Steel City",India,7004284554 / 7319742490,,No,-,-,-,HIGH,Biggest in Bokaro
+A,hyderabad,Elite Gym,,Hyderabad,Vanasthalipuram,"Plot No. 298, Vanasthalipuram Road, Prashanth Nagar, 500070",India,9849321000,,No,4.7,64,@elitegym_vanasthalipuram,MED,Small
+A,hyderabad,Equinox Fitness Hub,,Hyderabad,Habsiguda,"Kakatiya Nagar, Near Harithavanam Park, 500007",India,04027171218,,No,4.7,70+,-,MED,Good rating
+A,jharkhand,Every Time Fitness,,Ranchi,Harmu Road,"M.S. Tower, Harmu Rd, Opp Ghirddhar Plaza, Ranchi",India,8797693114,,No,-,-,-,HIGH,7000 sqft gym
+A,hyderabad,F3 Friends Fitness Freak,,Hyderabad,Saroornagar,"Near Saroornagar Lake Road, 500035",India,9866088299,,No,4.4,17,@f3fitnessfreak,LOW,Few reviews
+A,hyderabad,F5 Fitness Pro,,Hyderabad,KPHB,"KPHB Phase 9, Near Prajay Apartments",India,9700039998,,No,4.9,549+,@f5fitnesspro,HIGH,High rating
+A,global,Femme N Fusion Fitness,Boutique/Personal Training,Lucknow,,,India,+919936450063,,,4.8,50,,,
+A,hyderabad,Fit C Gym,,Hyderabad,Vanasthalipuram,"Near Red Tank, Prashanth Nagar, 500070",India,9949654321,,No,5.0,60,@fitcgym_vanasthalipuram,MED,5.0 but few reviews
+A,global,Fit Care Gym Ganganagar,Independent Gym,Sri Ganganagar,,,India,+919000034567,,,4.3,10,,,
+A,global,FitX Gym Kota,Independent Gym,Kota,,,India,+918000361686,,,4.8,120,https://instagram.com/fitxgym_kota,,
+A,global,FitZone Sikar,Independent Gym,Sikar,,,India,+919000067890,,,4.5,30,,,
+A,hyderabad,Fitlifez Gym & Spa,,Hyderabad,Kukatpally,"Opp. Hanuman Temple, Subhodaya Colony, Madhavi Nagar, 500072",India,9100841608,,No,4.6,353+,@fitlifezgym,HIGH,Spa + gym combo
+A,jharkhand,Fitness Box,,Bokaro,Sector 4,"Sector 4, Bokaro Steel City",India,9990853830,,No,-,-,@fitnessbox_bokaro,HIGH,Active Instagram
+A,global,Fitness Express Ahmedabad,Independent Gym,Ahmedabad,,,India,+917940401234,,,4.6,75,,,
+A,hyderabad,Fitness Freak Gym,,Hyderabad,Meerpet,"Meerpet, Hyderabad",India,9676950456,,No,3.9,124,@fitnessfreak_meerpet,LOW,Low rating
+A,global,Fitness Hub Bharatpur,Independent Gym,Bharatpur,,,India,+919414023456,,,4.3,15,,,
+A,global,Fitness Planet Bikaner,Independent Gym,Bikaner,,,India,+919829056789,,,4.3,20,,,
+A,global,Fitness Storm Gym Indore,Independent Gym,Indore,,,India,+919826017628,,,4.5,40,,,
+A,hyderabad,Fitness Stroke,,Hyderabad,Sainikpuri,"Plot No. 135B, Eshwaripuri Colony, Hi-Tension Road, Kapra, 500094",India,8008466391 / 9885872678,,No,4.9,210+,@fitnessstroke,HIGH,High rating
+A,global,Fitness buzz Kolkata,Independent Gym,Kolkata,,,India,+919830012345,,,4.5,70,,,
+A,hyderabad,Force Gym,,Hyderabad,Madhura Nagar,"Near Sainath Hospital, Madhura Nagar, 500038",India,9000333377,,No,4.2,478,-,HIGH,478 reviews no website
+A,global,Forever Fit Lucknow,Independent Gym,Lucknow,,,India,+918795101978,,,4.6,40,,,
+A,global,Gold Fitness Amritsar,Independent Gym,Amritsar,,,India,+919815122880,,,4.6,50,,,
+A,hyderabad,Grind & Glory Gym,,Hyderabad,Tellapur,"3rd Floor, Above Fabindia, Nallagandla Main Rd, 500019",India,9007535898,,No,4.7,110+,@grindandglorygym,HIGH,Good reviews
+A,hyderabad,Gym Beat Studio,,Hyderabad,Pragathi Nagar,"Mithila Nagar, Pragathi Nagar, 500090",India,9700777888,,No,4.9,83+,@gym_beat_multi_fitness_studio,MED,Small but good rating
+A,hyderabad,Gym House Multi Fitness,,Hyderabad,Nizampet,"1st Floor, SBI Bank Building, Beside Hanuman Temple, 500090",India,7207880803 / 7075744963,,No,4.8,350+,@gymhouse_nizampet,HIGH,Good reviews
+A,global,Gym Nation Bikaner,Independent Gym,Bikaner,,,India,+919024012345,,,4.5,25,,,
+A,jharkhand,GymNation,,Bokaro,Sector 4,"City Centre, Sector 4, Bokaro Steel City, 827004",India,8235626661 / 8335956466,,No,-,-,@gymnation_bokaro,HIGH,Sector 4
+A,hyderabad,GymPoint Studio (Tellapur),,Hyderabad,Tellapur,"Tellapur Main Road, 502032",India,8008884655 / 8790429547,,No,4.8,95+,@gympoint_fitness_studio,MED,Good rating
+A,hyderabad,Health Quest Gym,,Hyderabad,Dilsukhnagar,"East Prasanth Nagar, Near Dilsukhnagar Metro, 500060",India,9849284729 / 9177551166,,No,4.2,145+,@healthquestgym_hyd,MED,Good reviews
+A,global,Hyrwith Garima Ajmer,Boutique/Personal Training,Ajmer,,,India,+918955201567,info@hyrwithgarima.com,,4.6,30,,,
+A,global,Indian Strength Gym Indore,Strength & Conditioning,Indore,,,India,+916260049636,indianstrengthindore@gmail.com,,4.6,55,,,
+A,hyderabad,Infiniti Fitness,,Hyderabad,Gachibowli,"Opposite Platina Building, Gachibowli Main Rd, 500032",India,9703573111 / 9996667714,,No,4.7,150+,@infinitifitnessgym,HIGH,Good reviews
+A,global,Infinity Club Complete Fitness,Independent Gym,Jaipur,,,India,+919116895557,,,4.8,86,,,
+A,hyderabad,Invict Fitness,,Hyderabad,Manikonda,"Puppalaguda, Manikonda, Khajaguda, Narsingi, Kokapet",India,9550016488 / 9110745739,,No,-,-,@invict_fitness,HIGH,10K sqft premium
+A,global,Iron Body Gym Alwar,Independent Gym,Alwar,,,India,+919000012345,,,4.3,20,,,
+A,global,Iron Den Coimbatore,Independent Gym,Coimbatore,,,India,+919500011223,,,4.6,45,,,
+A,hyderabad,Iron Forge Gym,,Hyderabad,Madhapur,"1st Floor, Platinum Heights, 100 Feet Road, Ayyappa Society, 500081",India,7396633554 / 8374365713,,No,4.9,60+,@_iron_forge_,HIGH,High rating
+A,global,Iron Temple Kolkata,Strength & Conditioning,Kolkata,,,India,+919051067890,,,4.7,50,,,
+A,global,JF Gym Jaipur,Independent Gym,Jaipur,,,India,+919694096784,,,4.5,45,,,
+A,hyderabad,Jaguar Gym,,Hyderabad,Kukatpally,"Ramalayam Road, Venkat Rao Nagar Colony, 500072",India,8883614309 / 8884525999,,No,4.5,763+,@jaguargym_official,HIGH,763+ reviews
+A,global,Jaipur Fitness Iconic,Independent Gym,Jaipur,,,India,+919119168955,,,4.6,120,,,
+A,hyderabad,Jawan Pro Gym (KPHB),,Hyderabad,KPHB,"KPHB Phase 6, Kukatpally",India,9100841608 / 9666324419,,No,-,-,@jawanprogym,HIGH,Premium gym 2 branches
+A,hyderabad,Jawan Pro Gym (Kondapur),,Hyderabad,Kondapur,"Venkateshwara Nagar, Kondapur, 500084",India,9666324419 / 7416996969,,No,-,-,@jawanprogym,HIGH,2nd branch same brand
+A,global,Jersey Fitness Club Patna,Independent Gym,Patna,,,India,+917079324812,,,4.4,40,,,
+A,hyderabad,K5 Fitness Planet,,Hyderabad,Pocharam,"Plot No 74 & 75, Near Infosys Gate No:1, Pocharam",India,7799090959,,No,4.7,13+,-,MED,Near Infosys
+A,hyderabad,King Fitness Gym,,Hyderabad,Kukatpally,"4th Floor, Yashoda Pride, Near Rajiv Circle, 500072",India,9885090771,,No,4.8,520+,@kingfitnessgym_hyderabad,HIGH,High rating
+A,global,KleanFit Gym Jaipur,Independent Gym,Jaipur,,,India,+918690523342,,,4.6,60,,,
+A,hyderabad,Krish Fitness Pro,,Hyderabad,Madhapur,"Plot No. 92, Near Durgam Cheruvu Metro Station, 500081",India,7416996969 / 8885907444,,No,4.5,389+,@krishfitness22,HIGH,389 reviews
+A,hyderabad,Lean Fitness Studio,,Hyderabad,Kapra,"Bhavani Nagar Kaman, Opposite Kapra, 500062",India,9154246767,,No,4.9,560+,@leanfitnessstudio,HIGH,560+ reviews!
+A,global,Love Fitness x Body Makerz,Independent Gym,Indore,,,India,+917224807539,,,4.7,65,https://instagram.com/lovefitness_indore,,
+A,hyderabad,MPro Gym Squad,,Hyderabad,Hitech City,"Hitech City / Madhapur, 500081",India,9000306111,,No,4.9,23+,-,LOW,Few reviews
+A,jharkhand,MS Fitness Gym,,Deoghar,Bompas Town,"Behind Shanti Kothi, Bompas Town, Deoghar, 814114",India,8507744739 / 9199342375,,No,-,-,-,HIGH,Premium gym in Deoghar
+A,hyderabad,Mac Fitness Unisex,,Hyderabad,Gachibowli,"Indira Nagar, Gachibowli, 500032",India,6301223499,,No,5.0,93+,@mac_fitness25,HIGH,5.0 rating
+A,global,MetaFit Gym Lucknow,Independent Gym,Lucknow,,,India,+916394029273,,,4.7,75,https://instagram.com/metafit_lucknow,,
+A,hyderabad,Model Fitness Gym,,Hyderabad,Miyapur,"Near Allwyn X Roads, Miyapur, 500049",India,9177123456,,No,4.7,140+,@modelfitness_miyapur,MED,Verify details
+A,global,MultiFit Nagpur,Independent Gym,Nagpur,,,India,+917798700050,,,4.6,80,,,
+A,global,Muscle Factory Bharatpur,Independent Gym,Bharatpur,,,India,+919000078901,,,4.5,20,,,
+A,global,Muscle Factory Gym Patna,Independent Gym,Patna,,,India,+918130715957,,,4.3,35,,,
+A,global,NEO Fitness Lucknow,Independent Gym,Lucknow,,,India,+915224227316,,,4.5,85,,,
+A,hyderabad,Naren Fitness,,Hyderabad,Miyapur,"Guduru Plaza, 3rd Floor, Miyapur X Roads, 500049",India,8464060301,,No,4.6,411+,@narenfitness,HIGH,Crossfit
+A,global,Nirvana Fitness Surat,Boutique/Personal Training,Surat,,,India,+919825056789,,,4.6,55,,,
+A,hyderabad,O2 Fitness Studio,,Hyderabad,LB Nagar,"Saraswathi Nagar, Opp. Indian Petrol Bunk, Omkar Nagar, 500074",India,9666939565 / 9849562888,,No,4.6,241,@o2fitnessstudio_lbnagar,HIGH,241 reviews
+A,hyderabad,One Fitness Studio,,Hyderabad,Bachupally,"Opp. Vijetha Super Market, Bachupally X Roads, 500090",India,9618099887,,No,4.7,160+,@onefitness_bachupally,MED,Medium size
+A,global,Oxigen Fitness Club,Independent Gym,Jaipur,,,India,+918955002694,,,4.7,95,,,
+A,hyderabad,Oxygen Fitness Club,,Hyderabad,Karmanghat,"Panvij Towers, Raghavendra Nagar, 500079",India,9666939565,,No,4.9,64,@fitness_club_oxygen_,HIGH,High rating
+A,global,PBs Fitness Studio Nagpur,Boutique/Personal Training,Nagpur,,,India,+919270149481,,,4.8,55,,,
+A,hyderabad,Perfect Fitness Gym,,Hyderabad,Moula Ali,"Above Life Line Hospital, Opp. Balaji Dental Hospital, 500040",India,9885123456,,No,4.4,280+,-,MED,280 reviews
+A,global,Power Gym Sikar,Independent Gym,Sikar,,,India,+919413055667,,,4.4,15,,,
+A,global,Power House Gym Surat,Independent Gym,Surat,,,India,+919033012345,,,4.5,45,,,
+A,global,Power House Gym Udaipur,Independent Gym,Udaipur,,,India,+919509599223,,,4.8,85,https://instagram.com/powerhousegymudaipur,,
+A,global,Power World Kochi,Independent Gym,Kochi,,,India,+919847012345,,,4.5,50,,,
+A,global,Premium Gym Vijay Nagar Indore,Independent Gym,Indore,,,India,+917694000404,,,4.8,90,,,
+A,hyderabad,Pro 6 Gym,,Hyderabad,Moula Ali,"Nagarjuna Nagar, Moula Ali Road, Lalapet, 500040",India,8686853242,,No,4.5,175+,@pro6gym_tarnaka,MED,Medium
+A,hyderabad,Pro Ultimate Gym,,Hyderabad,Nallagandla,"Gopanpally / Nallagandla, Hyderabad",India,7733800033 / 7733002281,,No,-,-,@pug_nallagandla_hyderabad,HIGH,Nallagandla area
+A,global,Pro Ultimate Gyms Chandigarh,Independent Gym,Chandigarh,,,India,+919356704646,,,4.6,85,,,
+A,global,Pulse Fitness Coimbatore,Independent Gym,Coimbatore,,,India,+919789045678,,,4.7,35,,,
+A,hyderabad,R Fitness Gym,,Hyderabad,Uppal,"3rd Floor, Jetta Mallaiah Complex, Uppal Main Rd, 500039",India,9121555888,,No,4.7,289+,@rfitnessuppal,HIGH,289+ reviews
+A,global,RIPD Fitness Indore,Independent Gym,Indore,,,India,+917999676836,,,4.8,110,,,
+A,global,Rambo Fitness Gym Kota,Independent Gym,Kota,,,India,+917737347614,,,4.5,40,,,
+A,hyderabad,Ravv Fitness Club,,Hyderabad,Lingampally,"Seven Hills Commercial Complex, Near Lingampally Railway Station, 500019",India,8801982889,,No,4.9,734+,@ravvfitnessclub,HIGH,Excellent rating
+A,hyderabad,Real Fitness Gym,,Hyderabad,Miyapur,"Near Miyapur Bus Depot, Miyapur Main Road, 500049",India,9848012345,,No,4.5,180+,@realfitness_miyapur,MED,Verify details
+A,hyderabad,Retro Fit Gym,,Hyderabad,Chaitanyapuri,"3rd Floor, Above Sri Vaibhavam Mall, Kothapet Main Road, 500035",India,9700810999,,No,4.8,1100+,@retrofitgymlh,HIGH,1100+ reviews!
+A,global,Revolution Fitness Jodhpur,Independent Gym,Jodhpur,,,India,+919982688444,,,4.7,80,,,
+A,jharkhand,Rhino's Gym,,Ranchi,Kadru,"2nd Floor, Skyline Tower, Kadru, Ranchi",India,9777155127 / 6204287103,,No,-,-,@rhinossgym,HIGH,Active Instagram
+A,global,Royal Gym Sri Ganganagar,Independent Gym,Sri Ganganagar,,,India,+919414098765,,,4.4,15,,,
+A,global,Royals Fitness Club Kota,Independent Gym,Kota,,,India,+919983447799,,,4.6,65,,,
+A,hyderabad,Ryno's Gym,,Hyderabad,Karmanghat,"Karmanghat, 500079",India,8008884655,,No,4.6,35,@rynosgym_karmanghat,LOW,Few reviews
+A,jharkhand,SA Gym,,Dhanbad,Bank More,"Bank More, near bara gurudwara, Dhanbad, 826001",India,9835529622 / 9334046907,,No,-,-,@dhanbadfitness__sagym,HIGH,Well-known gym
+A,hyderabad,SR Strong Gym,,Hyderabad,Nizampet,"Above HDFC Bank, Opp. Bhavya's Anand, 500090",India,9949988776,,No,4.6,210+,@srstronggym,HIGH,Good reviews
+A,hyderabad,STRYV Active Fitness,,Hyderabad,Tellapur,"Beside Manthan International School, Tellapur, 502032",India,9177952244,,No,4.9,18+,@stryvactive_fitnessstudio,MED,New gym
+A,global,Shahi Gym Amritsar,Independent Gym,Amritsar,,,India,+919814000001,,,4.5,40,,,
+A,hyderabad,Shakthi Gym,,Hyderabad,Uppal,"Opp. Pochamma Temple, Chilka Nagar, Adarsh Nagar, 500039",India,9848496829,,No,4.3,487+,-,MED,487 reviews
+A,global,Shakti Gym Pali,Independent Gym,Pali,,,India,+919414034567,,,4.4,10,,,
+A,global,Shree Ganesh Gym Alwar,Independent Gym,Alwar,,,India,+919414000001,,,4.4,25,,,
+A,hyderabad,Skies Fitness Studio,,Hyderabad,Sainikpuri,"38-87, Sainikpuri Rd, Officers Colony, 500094",India,9959988776,,No,4.6,180+,@skiesfitness,MED,Medium
+A,global,Spartan Fitness Zone Kota,Independent Gym,Kota,,,India,+919928066885,,,4.7,50,,,
+A,hyderabad,Sportivo Sports Arena,,Hyderabad,Kushaiguda,"KIA Showroom Building, Beside Vijaya Diagnostic, ECIL, 500062",India,8367009009 / 8885522183,,No,4.7,250+,@sportivosportsarena,HIGH,250+ reviews
+A,hyderabad,Stalwart Gym,,Hyderabad,KPHB,"2nd & 3rd Floor, Plot No-22, 7th Phase, Near Ankura Hospital",India,9989944888,,No,4.6,310+,@stalwartgym_kphb,HIGH,Good reviews
+A,hyderabad,Stark Fitness Studio,,Hyderabad,Bachupally,"4th & 5th Floor, A Rama Chandra Rao Complex, Mallampet Rd, 500090",India,9966332211,,No,4.8,290+,@starkfitnessstudio,HIGH,Good reviews
+A,hyderabad,T26 Fit Club,,Hyderabad,Saroornagar,"Plot No. 117, Road No. 3, Beside Nakshatra Hospital, 500035",India,7416313131,,No,4.7,79,@t26fitclub,MED,Medium
+A,hyderabad,Tarzen Gym,,Hyderabad,Uppal,"Sairam Colony Rd, Near NS Grammar School, Hanumasai Nagar, 500039",India,9989894812,,No,4.8,412+,-,HIGH,412+ reviews
+A,hyderabad,The Captain Gym,,Hyderabad,Meerpet,"Meerpet, Hyderabad",India,8686666988,,No,4.5,50+,@thecaptaingym__01,MED,Medium
+A,global,The J Fitness Club Ajmer,Independent Gym,Ajmer,,,India,+917568412222,,,4.5,55,https://instagram.com/the_j_fitness_club_ajmer,,
+A,hyderabad,Universal Gym,,Hyderabad,Dilsukhnagar,"Shalivahana Nagar, Near Brilliant Grammar High School, 500036",India,7032705400,,No,4.0,378,-,MED,378 reviews
+A,hyderabad,Universal Gym (Malkajgiri),,Hyderabad,Malkajgiri,"Near Vishnupuri Colony, 500047",India,9849278512,,No,4.6,215+,-,MED,Medium
+A,hyderabad,V2 Fitness Zone (Miyapur),,Hyderabad,Miyapur,"164, Pragathi Enclave, Next to SMR Vinay INOX Mall, 500049",India,9933971222,,No,4.8,127+,@v2fitnesszone,HIGH,Growing brand
+A,hyderabad,VR Fitness,,Hyderabad,Alwal,"Bolarum, Alwal, Hyderabad 500010",India,9985241415 / 9985341415,,No,4.5,82+,-,MED,Alwal area
+A,global,VS Luxury Gym Nagpur,Independent Gym,Nagpur,,,India,+917822949466,,,4.7,65,,,
+A,hyderabad,Varun Gym & Fitness,,Hyderabad,Chaitanyapuri,"Hanuman Nagar, Chaitanyapuri Main Road, 500060",India,9848564732,,No,4.3,95+,-,MED,Medium
+A,hyderabad,Vayuputra Gym,,Hyderabad,Bachupally,"Medak Road, Near Bachupally Bus Stop, 500090",India,9849011223,,No,4.5,175+,@vayuputragym_bachupally,MED,Medium size
+A,global,Vibes Fitness Ahmedabad,Independent Gym,Ahmedabad,,,India,+919099090555,,,4.7,60,,,
+A,global,Virgin Allied Gym Ajmer,Independent Gym,Ajmer,,,India,+919783555955,,,4.7,75,,,
+A,hyderabad,Will Power Fitness,,Hyderabad,Nagole,"2nd Floor, Kinara Grand Building, Above Reliance Digital, Alakapuri X Road, Nagole",India,8074071249,,No,-,-,@will_power_fitness_gym,HIGH,10000 sqft biggest in Nagole
+B,jharkhand,112 Fitness Planet,,Jamshedpur,-,"Near Jamshedpur, Jamda",India,7908861597,,No,-,-,-,LOW,Outside main city
+B,hyderabad,A1 Fitness Gym,,Hyderabad,Masab Tank,"Masab Tank, Hyderabad",India,9966721238,,?,-,-,-,MED,Verify details
+B,jharkhand,Alokapuri Gym,,Ranchi,Lalpur,"Alokapuri Complex, Lalpur Chowk, Ranchi",India,7903006676,,No,-,-,-,MED,Lalpur area
+B,hyderabad,Axon Fit,,Hyderabad,Puppalaguda,"Puppalaguda, Manikonda",India,9000179154 / 9553350555,,No,-,-,-,MED,Manikonda area
+B,global,Barbell Academy Delhi,Strength & Conditioning,Delhi,,,India,+911145678901,,https://barbellacademydelhi.in,4.7,130,,,
+B,hyderabad,CFS9 Gym (Jubilee Hills),,Hyderabad,Jubilee Hills,"Jubilee Hills, 10",India,9281151518,,Yes,-,-,@cfs9gym,HIGH,3rd branch
+B,hyderabad,CFS9 Gym (Kondapur),,Hyderabad,Kondapur,"3rd Floor, Pardhasan Complex, Kondapur, 500084",India,8886564999,,Yes,4.8,122+,@cfs9kondapur,HIGH,3 branches growing
+B,hyderabad,CFS9 Gym (Madhapur),,Hyderabad,Madhapur,"Madhapur, 500081",India,9052288888,,Yes,-,-,@cfs9gym,HIGH,2nd branch
+B,hyderabad,CM's Star Fitness,,Hyderabad,Karmanghat,"Karmanghat Rd, 500079",India,9888544445 / 9640185555,,Yes,4.8,70+,@sfs_kharmanghat,HIGH,Has website
+B,global,Chennai Strength Lab,Strength & Conditioning,Chennai,,,India,+914467894567,,https://chennaistrengthlab.com,4.7,45,,,
+B,hyderabad,City 8 Gym,,Hyderabad,Tolichowki,Tolichowki / Mehdipatnam / Shaikpet / Golconda,India,8106778154 / 7842958830,,No,-,-,-,MED,Women-only 6000 sqft
+B,hyderabad,Core Fitness Gym,,Hyderabad,Chandanagar,"Chandanagar, Hyderabad",India,04040028644,,No,-,-,-,MED,Chandanagar area
+B,jharkhand,Crazy Fitness Club,,Ranchi,Lalpur/Morabadi,"Edalhatu, Morabadi & J.C. Road, Lalpur, Ranchi",India,9263348531 / 7909012055,,No,-,-,@crazy_fitness_club_,MED,Independent local
+B,global,CrossFit Bengaluru,CrossFit Box,Bengaluru,,,India,+918023451234,,https://crossfitbengaluru.com,4.8,85,,,
+B,global,CrossFit Hyderabad,CrossFit Box,Hyderabad,,,India,+914067891234,,https://crossfithyderabad.com,4.7,65,,,
+B,dausa,D Fitness Club,,Dausa,Dausa City,"SK Hospital, Khan Bhankri Road, Dausa",India,9413233440 / 9414727575,,,-,-,Starter,Has phone number,
+B,hyderabad,DS Ignite Fitness,,Hyderabad,Vanasthalipuram,"3rd Floor, DMart Building, Vanasthalipuram Main Road, 500070",India,7997222001 / 7997222002,,Yes,4.9,120+,@ds_ignitefitness,HIGH,High rating
+B,global,Delhi Strength Collective,Strength & Conditioning,Delhi,,,India,+911167893456,,https://delhistrengthcollective.in,4.8,75,,,
+B,jharkhand,Dhanbad Multi Gym,,Dhanbad,Hirapur,"Durga Mandir Road, Telipara Road, Near Kali Mandir, Hirapur, Dhanbad, 826001",India,7488336115,,No,-,-,-,MED,Hirapur area
+B,hyderabad,Elite Fitness Club,,Hyderabad,Shaikpet,Shaikpet / Tolichowki,India,9059084653 / 8125084652,,No,-,-,@elitefitnessclub.shk,MED,Ladies only
+B,hyderabad,Fat2Fit Women's Gym,,Hyderabad,Bandlaguda,"5th Floor, Star Complex, Chandrayangutta, Bandlaguda",India,9959037462 / 7416131654,,No,-,-,@fat2fitwomensgym,MED,Women only
+B,dausa,Fifty 7 Fitness & Gym,,Dausa,Jamdoli,"Jamdoli, Agra Road, Jaipur 302020",India,9828331510,,,-,-,Standard,Prime location on Agra Road,
+B,global,Fit Planet Boring Road Patna,Independent Gym,Patna,,,India,+917707002700,,https://fitplanetgym.com,4.7,85,https://instagram.com/fitplanet_boring_road,,
+B,hyderabad,Fitness Edge Gym,,Hyderabad,Begumpet/Abids/Koti,"Multiple branches: Begumpet, Abids, Koti",India,9985295243 / 9984242007,,Yes (thefitnessedge.in),-,-,@fitnessedge.gym,HIGH,3 branches
+B,jharkhand,Fitness Gym,,Giridih,-,"Giridih, Jharkhand",India,9199342375,,No,-,-,-,MED,Small city gym
+B,hyderabad,Fitness Loading,,Hyderabad,Gachibowli,"Mahaveer Manc, 4th Floor, Near Yum Yum Tree Restaurant, 500032",India,9674999311 / 7593866664,,Yes,5.0,417+,@fitnessloadingg,HIGH,5.0 rating!
+B,jharkhand,Fitness Zone Unisex Multi Gym,,Jamshedpur,-,"Jamshedpur, Jharkhand",India,6201337476,,No,-,-,-,MED,Need area details
+B,hyderabad,Fitness9,,Hyderabad,Kompally,"Doolapally Road, Kompally",India,9000292442,,No,-,-,-,MED,Kompally area
+B,jharkhand,Fitstyle Gym,,Jamshedpur,Adityapur,"Near MP Tower, Main Road, Adityapur, Jamshedpur",India,9304362307,,No,-,-,@souravfitstyle,MED,Adityapur area
+B,jharkhand,GR8 Fit Gym,,Jamshedpur,Golmuri,"3rd Floor, Beside Gulsan Medical, Near H.P Petrol Pump, Golmuri, 831003",India,7903160728,,No,-,-,-,MED,Golmuri area
+B,jharkhand,Gold Dozo Gym,,Deoghar,-,"4th Floor, Bhavya Iconic Tower, Deoghar",India,7070259222 / 9153912607,,No,-,-,-,MED,Deoghar area
+B,jharkhand,Gym Nation Dhanbad,,Dhanbad,-,"Dhanbad, Jharkhand",India,9330461055,,No,-,-,-,MED,Gym Nation brand
+B,hyderabad,GymPoint Studio (Gopanpally),,Hyderabad,Gopanpally,"4&5 Floor, 2-89/A, Gopanpally Tanda, Serilingampally",India,7075596162,,No,-,-,-,MED,Gopanpally branch
+B,hyderabad,GymPoint Studio (Malakpet),,Hyderabad,Malakpet,"Malakpet, Hyderabad",India,7337450716,,No,-,-,-,MED,Malakpet branch
+B,jharkhand,GymXpro,,Chaibasa,-,"2nd Floor, S S Complex, Tata Kandra Rd, Chaibasa",India,9296984600 / 9133707286,,No,-,-,-,MED,Chaibasa area
+B,global,HYROX Bangalore,Strength & Conditioning,Bengaluru,,,India,+919999278272,,https://hyrox.co.in,4.8,95,,,
+B,hyderabad,Hammer Gym,,Hyderabad,Bahadurpura,"Bahadurpura, Doodhbowli, Hyderabad",India,9652553344,,No,-,-,-,MED,Old city area
+B,hyderabad,Highlife Fit,,Hyderabad,Nizampet,"Nizampet Main Road, Near Kolan Raghav Reddy Gardens, 500090",India,8978094449,,Yes,4.9,365+,@highlife.fit,HIGH,Has website
+B,jharkhand,Hustle Gym,,Bokaro,-,Bokaro Steel City,India,7970743090 / 7292894066,,No,-,-,@hustlegym2021,MED,Need area
+B,global,Hyderabad Iron Club,Independent Gym,Hyderabad,,,India,+914067895678,,https://hyderabadironclub.com,4.6,55,,,
+B,hyderabad,Hyper Fitness Studio,,Hyderabad,Chikkadpally,"1113 Chikkadpally Rd, near Pista House, Bagh Lingampally, 500020",India,9032177230,,Yes (hyperfitnessstudio.in),-,-,-,MED,Nallakunta area
+B,hyderabad,IFC MMA Gym,,Hyderabad,Malakpet,"Malakpet, Hyderabad",India,7997777003 / 7997777004,,No,-,-,-,MED,MMA + fitness
+B,hyderabad,IMFIT Gym & CrossFit,,Hyderabad,Madhapur,"2nd Floor, Techno Polis, Hitech City Main Rd, 500081",India,8507333555,,Yes,4.9,484+,@imfithyderabad,HIGH,484 reviews
+B,hyderabad,Inner Strength Gym,,Hyderabad,Tarnaka,"2nd Floor, Above Big Plate Mandi, Near Tarnaka Metro, 500007",India,9966927316 / 8217045451,,Yes,4.5,470+,@innerstrength01,HIGH,470+ reviews
+B,global,Iron Atelier Mumbai,Boutique/Personal Training,Mumbai,,,India,+919876543210,,https://ironatelier.in,4.7,95,,,
+B,dausa,John Fitness Gym,,Dausa,Dausa City,"Dausa, Rajasthan 303303",India,9461627473,,,-,@john_fitness_gym_dausa,Starter,Active Instagram,advanced machines
+B,jharkhand,KR Gym,,Bokaro,Chas,"Chas Block, Bokaro",India,8092626251,,No,-,-,-,MED,Chas area
+B,jharkhand,Lifestyle Fitness Gym,,Jamshedpur,Mango,"NH33, Near Royal Enfield Showroom, Mango, Jamshedpur",India,9724883794,,No,-,-,-,MED,Mango area
+B,global,Mumbai Strength Academy,Strength & Conditioning,Mumbai,,,India,+919876545678,,https://mumbaistrengthacademy.in,4.7,110,,,
+B,jharkhand,Muscle & Fitness Gym 1,,Bokaro,Sector 4,"Sector 4, Bokaro Steel City, 827004",India,9798239540,,No,-,-,-,MED,Sector 4
+B,hyderabad,N Zone Fitness,,Hyderabad,Habsiguda,"4th Floor, Manasa Complex, Above Inmark, 500007",India,04027158899,,No,4.1,36+,-,LOW,Few reviews
+B,global,Namma CrossFit Chennai,CrossFit Box,Chennai,,,India,+914456789012,,https://nammacrossfit.com,4.8,55,,,
+B,hyderabad,Near Fitness,,Hyderabad,KPHB Phase 9,"Above Ganshyam Super Market, KPHB Phase 9",India,JustDial,,No,-,-,-,MED,Small independent
+B,hyderabad,Phoenix Fitness,,Hyderabad,Kompally,"Kompally, Hyderabad",India,7093343485 / 9618088801,,Yes (phoenix-fitness.in),-,-,@phoenixhyderabad,HIGH,Kompally area
+B,hyderabad,Potens Fitness,,Hyderabad,Madhapur,"Plot No. 19, Durgam Cheruvu Road, 500081",India,9010790000,,Yes,4.5,150+,@potensfitness,MED,Has website
+B,hyderabad,Pradeep Gym,,Hyderabad,Ameerpet,"3rd Floor, Near AAA Mall, Balkampet Road, 500016",India,7799444710,,Yes,-,289,@pradeepgym_ameerpet,HIGH,289 reviews
+B,hyderabad,Pulse8 Gym (Abids),,Hyderabad,Abids,"5-4-742/1, Abids",India,-,,Yes,-,-,-,HIGH,2nd branch
+B,hyderabad,Pulse8 Gym (Srinagar Colony),,Hyderabad,Srinagar Colony,"4th Floor, 8-3-986, Srinagar Colony Main Rd, Above Karachi Bakery, 500073",India,8247346192,,Yes (pulse8gym.com),-,698,-,HIGH,698 reviews multi-branch
+B,global,Pune Fight Academy,MMA/Combat Sports,Pune,,,India,+919012345678,,https://punefightacademy.in,4.8,65,,,
+B,hyderabad,RS Fitness,,Hyderabad,Nagole,"Desi Drivein, Nagole Jaipur Colony Main Road, 500068",India,8341656817,,No,-,-,-,MED,Nagole area
+B,jharkhand,Reformation Body,,Jamshedpur,Adityapur,"Above Sharma Furniture, Akashwani Chowk, Adityapur",India,7004356390,,No,-,-,@reformation.body,MED,Adityapur area
+B,jharkhand,Ricky's Fitness Point Multi Gym,,Ranchi,Booty More,"Bariatu Road, Booty More Chowk, Ranchi",India,9661168880,,No,-,-,-,MED,Booty More area
+B,jharkhand,SG Fitness Gym,,Deoghar,-,"Near Pani Tanki, Deoghar",India,7004260379,,No,-,-,-,MED,Small independent
+B,dausa,Shree Sports Club,,Dausa,Dausa City,"Behind PNB Bank, Santhal Mode, Dausa 303303",India,9828622336 / 7014183841,,,-,@shree_sports_club_dausa,Starter,Active Instagram,best trainer in Dausa
+B,hyderabad,Sky 9 Gym,,Hyderabad,Tolichowki,"Tolichowki, Hyderabad",India,8106778154,,No,-,-,-,MED,Tolichowki area
+B,hyderabad,Skyrock Fitness,,Hyderabad,Financial District,"Plot No. 12, Opp. My Home Vihanga, TNGOS Colony, 500032",India,9100325831,,Yes,4.8,247+,@skyrockfitness,HIGH,Premium
+B,hyderabad,Solitaire Fitness,,Hyderabad,5 Branches,"Mehdipatnam, Attapur, Shaikpet, Shantinagar Colony, Nagole",India,8956300300 / 8099934761,,Yes (solitairefitness.com),-,-,-,HIGH,BIGGEST lead 5 branches!
+B,jharkhand,SoulFit Gym,,Jamshedpur,Golmuri,"Golmuri, Jamshedpur, 831003",India,7004299098 / 7209880672,,No,-,-,@soulfit_gym01,MED,Active Instagram
+B,hyderabad,Stallion Xtreme Fitness,,Hyderabad,Jeedimetla,"D.NO 6-105/5, Jeedimetla, Medchal Dist",India,8885110136,,No,-,-,-,MED,Jeedimetla area
+B,jharkhand,Stay Fit With Suman,,-,-,Jharkhand,India,7091952765,,No,-,-,@stayfitwithsuman,LOW,Zumba/Yoga/Dance
+B,hyderabad,Steel Hourly Gym,,Hyderabad,Gachibowli,"3rd Floor, Jyothi Imperial Building, Above South India Shopping Mall, 500032",India,9542999999,,Yes,4.8,50+,@steelhourly,MED,Hourly model
+B,jharkhand,Sunny's Fitness,,Dhanbad,City Center,"5th Floor, Sumbridhi Garden, Near City Center, Dhanbad",India,9608557558 / 6206077338,,No,-,-,-,MED,Zumba + fitness
+B,jharkhand,Tara Fitness Gym,,Ranchi,Antu Chowk,"3rd Floor, Janki Tower, Antu Chowk, Ranchi, 834008",India,7004467471,,No,-,-,-,MED,Small independent
+B,jharkhand,Techno Fitness,,Jamshedpur,Dimna Road,"Dimna Chowk, Beside Transports Nagar, Dimna Road, Jamshedpur",India,8401455482,,No,-,-,-,MED,Unisex multi gym
+B,global,The Fight Club Pune,MMA/Combat Sports,Pune,,,India,+912034567890,,https://fightclubpune.in,4.6,70,,,
+B,global,The Fit Factory Bhopal,Independent Gym,Bhopal,,,India,+917000475346,support@thefitfactory.co.in,https://thefitfactory.co.in,4.6,50,,,
+B,jharkhand,The Fitness Founder,,Jamshedpur,Adityapur,"2nd Floor, S S Complex, Tata Kandra Rd, Adityapur",India,9133707286,,No,-,-,-,MED,Bodybuilder focused
+B,hyderabad,The Gym,,Hyderabad,Nacharam,"Nacharam-Mallapur Road, Snehapuri Colony, 500076",India,9700213179,,No,-,-,-,MED,Nacharam area
+B,dausa,The Rock Gym Dausa,,Dausa,Dausa City,"Dausa, Rajasthan 303303",India,9166538733,,,-,@rockgymdausa,Starter,AC gym girls & boys. Was closed,check if reopened
+B,global,TheQuad Bengaluru,Strength & Conditioning,Bengaluru,,,India,+918023456789,,https://thequad.in,4.8,180,,,
+B,hyderabad,Total Fitness Gym,,Hyderabad,Malakpet,"Malakpet, Hyderabad",India,7416057199 / 9866944440,,No,-,-,@totalfitness_gym11,MED,Malakpet area
+B,jharkhand,Trusted Fitness Factory,,Bokaro,Chas,"Chas, Bokaro Steel City, 827013",India,7717739322,,No,-,-,-,MED,Chas area
+B,hyderabad,Turbo Fit Gyms,,Hyderabad,Uppal,"Bagayat, Uppal Nagole, 500039",India,9542607674,,No,-,-,@turbofit_gyms,MED,Uppal area
+B,jharkhand,Twenty Four Fitness,,Jamshedpur,Bistupur,"R&M Mall, 1st Floor, Bistupur, Jamshedpur",India,9031046312 / 8797638938,,No,-,-,-,MED,New gym in mall
+B,jharkhand,Universal Gym,,Ranchi,HB Road,"2nd Floor, R K Bhagat Building, Near Plaza Chowk, H B Road, Ranchi, 834001",India,9835530262,,No,-,-,-,MED,Old established gym
+B,hyderabad,V2 Fitness Zone (Sainikpuri),,Hyderabad,Sainikpuri,"Plot No. 84, JCR Complex, 4th Floor, Vayupuri, 500094",India,9933971222 / 9933583222,,Yes,4.8,750+,@v2fitnesszone,HIGH,750+ reviews!
+GLOBAL,global,121 Fitness Brooklyn,Boutique/Personal Training,New York,,,USA,+13477991212,,https://121fitness.info,4.9,40,,,
+GLOBAL,global,Abu Dhabi Combat Club,MMA/Combat Sports,Abu Dhabi,,,UAE,+97125553344,,https://adcc.ae,4.9,80,,,
+GLOBAL,global,Abu Dhabi Strength Gym,Strength & Conditioning,Abu Dhabi,,,UAE,+97126789012,,https://abudhabistrength.ae,4.7,70,,,
+GLOBAL,global,Alareen Academy Dubai,MMA/Combat Sports,Dubai,,,UAE,+971564451708,,https://alareenacademy.com,4.7,45,,,
+GLOBAL,global,Apex Fitness Montreal,Independent Gym,Montreal,,,Canada,+15146703484,,https://apexfitnessmtl.com,4.6,60,,,
+GLOBAL,global,Atomic Fitness Sydney,Independent Gym,Sydney,,,Australia,+61280887766,,https://atomicfitnesssydney.com.au,4.6,75,,,
+GLOBAL,global,Balanced Fitness San Diego,Boutique/Personal Training,San Diego,,,USA,+16192323484,,https://balancedfitnesshealth.com,4.7,65,,,
+GLOBAL,global,Birmingham Strength Academy,Strength & Conditioning,Birmingham,,,UK,+441214488228,,https://birminghamstrengthacademy.co.uk,4.7,40,,,
+GLOBAL,global,Brick Fitness West Hollywood,CrossFit Box,Los Angeles,,,USA,+13106522700,,https://brick.fit,4.6,160,,,
+GLOBAL,global,CONDITN Melbourne,Strength & Conditioning,Melbourne,,,Australia,+61390876543,,https://conditn.com,4.8,120,,,
+GLOBAL,global,Calgary Barbell Club,Strength & Conditioning,Calgary,,,Canada,+14038002278,,https://calgarybarbellclub.ca,4.8,35,,,
+GLOBAL,global,Cheetah Gym Chicago,Independent Gym,Chicago,,,USA,+17734890255,,https://cheetahgym.com,4.5,210,,,
+GLOBAL,global,Chicago MMA & Fitness,MMA/Combat Sports,Chicago,,,USA,+17738281212,,https://chicagomma.com,4.7,140,,,
+GLOBAL,global,Club 300 NYC,Boutique/Personal Training,New York,,,USA,+12125751677,,https://club300nyc.com,4.8,85,,,
+GLOBAL,global,Club Studio Miami,Boutique/Personal Training,Miami,,,USA,+13054237204,,https://clubstudiofitness.com,4.5,85,,,
+GLOBAL,global,CrossFit 3D Manchester,CrossFit Box,Manchester,,,UK,+447889767575,info@crossfit3d.com,https://crossfit3d.com,4.9,140,,,
+GLOBAL,global,CrossFit Austin,CrossFit Box,Austin,,,USA,+15126234222,,https://crossfitaustin.com,4.7,110,,,
+GLOBAL,global,CrossFit Birmingham UK,CrossFit Box,Birmingham,,,UK,+441217182828,,https://crossfitbirmingham.co.uk,4.7,60,,,
+GLOBAL,global,CrossFit Brisbane,CrossFit Box,Brisbane,,,Australia,+61403892798,info@crossfitbrisbane.com,https://crossfitbrisbane.com,4.7,80,,,
+GLOBAL,global,CrossFit Calgary,CrossFit Box,Calgary,,,Canada,+14034575533,,https://crossfitcalgary.com,4.7,75,,,
+GLOBAL,global,CrossFit Central Austin,CrossFit Box,Austin,,,USA,+15124885400,,https://crossfitcentral.com,4.7,120,,,
+GLOBAL,global,CrossFit EXF Brisbane,CrossFit Box,Brisbane,,,Australia,+61411296248,info@exodusfitness.com.au,https://crossfitexf.com.au,4.8,65,,,
+GLOBAL,global,CrossFit Glasgow,CrossFit Box,Glasgow,,,UK,+441412376000,,https://crossfitglasgow.com,4.8,70,,,
+GLOBAL,global,CrossFit Hackney,CrossFit Box,London,,,UK,+442070330606,,https://crossfithackney.com,4.7,95,,,
+GLOBAL,global,CrossFit Hollywood,CrossFit Box,Los Angeles,,,USA,+13236173669,,https://crossfithollywood.com,4.7,140,,,
+GLOBAL,global,CrossFit Los Angeles (Oak Park),CrossFit Box,Los Angeles,,,USA,+13103102892,info@oakparkla.com,https://oakparkla.com,4.8,200,,,
+GLOBAL,global,CrossFit Muse,CrossFit Box,Los Angeles,,,USA,+12132751687,,https://crossfitmuse.com,4.8,95,,,
+GLOBAL,global,CrossFit NYC,CrossFit Box,New York,,,USA,+12125642828,,https://crossfitnyc.com,4.6,350,https://instagram.com/crossfit_nyc,,
+GLOBAL,global,CrossFit North London,CrossFit Box,London,,,UK,+442071487148,info@crossfitnorthlondon.co.uk,https://crossfitnorthlondon.co.uk,4.8,180,,,
+GLOBAL,global,CrossFit Perth,CrossFit Box,Perth,,,Australia,+61893285432,,https://crossfitperth.com.au,4.7,60,,,
+GLOBAL,global,CrossFit Polaris Brisbane,CrossFit Box,Brisbane,,,Australia,+61733584555,,https://crossfitpolaris.com.au,4.7,55,,,
+GLOBAL,global,CrossFit Queens NYC,CrossFit Box,New York,,,USA,+17188039300,,https://crossfitqueens.com,4.8,95,,,
+GLOBAL,global,CrossFit Sydney CBD,CrossFit Box,Sydney,,,Australia,+61282573456,,https://crossfitsydneycbd.com.au,4.8,110,,,
+GLOBAL,global,CrossFit Toronto,CrossFit Box,Toronto,,,Canada,+14167039234,,https://crossfittoronto.com,4.7,180,,,
+GLOBAL,global,CrossFit Vancouver,CrossFit Box,Vancouver,,,Canada,+16045581911,,https://crossfitvancouver.com,4.7,85,,,
+GLOBAL,global,Dallas MMA Academy,MMA/Combat Sports,Dallas,,,USA,+12145505425,,https://dallasmma.com,4.8,75,,,
+GLOBAL,global,Dallas Strength Co,Strength & Conditioning,Dallas,,,USA,+14695550199,,https://dallasstrength.com,4.8,45,,,
+GLOBAL,global,DogTown CrossFit,CrossFit Box,Los Angeles,,,USA,+13105591220,,https://dogtowncrossfit.com,4.9,85,,,
+GLOBAL,global,Dogpound NYC,Boutique/Personal Training,New York,,,USA,+16469183222,,https://dogpound.com,4.9,180,https://instagram.com/dogpound,,
+GLOBAL,global,Doha CrossFit Box,CrossFit Box,Doha,,,Qatar,+97433445678,,https://dohacrossfit.com,4.8,50,,,
+GLOBAL,global,Doha Fitness Studio,Boutique/Personal Training,Doha,,,Qatar,+97444948800,,https://dohafitness.qa,4.6,50,,,
+GLOBAL,global,Drive495,Boutique/Personal Training,New York,,,USA,+12129291400,,https://drive495.com,4.6,78,,,
+GLOBAL,global,Dubai Barbell Club,Strength & Conditioning,Dubai,,,UAE,+97145589911,,https://dubaibarbell.ae,4.8,65,,,
+GLOBAL,global,Element Gym Denver,Independent Gym,Denver,,,USA,+13034770626,,https://elementgym.com,4.8,120,,,
+GLOBAL,global,Fit Athletic Club San Diego,Independent Gym,San Diego,,,USA,+16192314348,,https://fitathletic.com,4.6,140,,,
+GLOBAL,global,Fitness Zone Dubai,Independent Gym,Dubai,,,UAE,+97142345678,,https://fitnesszone.ae,4.6,85,,,
+GLOBAL,global,Fourth Wave Fitness Vancouver,Boutique/Personal Training,Vancouver,,,Canada,+16045684774,,https://fourthwavefitness.ca,4.7,50,,,
+GLOBAL,global,Glasgow Combat Centre,MMA/Combat Sports,Glasgow,,,UK,+441415527788,,https://glasgowcombatcentre.co.uk,4.7,45,,,
+GLOBAL,global,Gleason's Gym Brooklyn,MMA/Combat Sports,New York,,,USA,+17187972872,,https://gleasonsgym.net,4.6,220,,,
+GLOBAL,global,Greenpoint Athletics,CrossFit Box,New York,,,USA,+17183892248,,https://greenpointathletics.com,4.9,85,,,
+GLOBAL,global,Greys Gym Brooklyn,Independent Gym,New York,,,USA,+17183881100,,https://greysgym.com,4.7,120,,,
+GLOBAL,global,Grinders Fitness Denver,MMA/Combat Sports,Denver,,,USA,+17203168317,,https://grindersfitness.com,4.7,65,,,
+GLOBAL,global,Hanson Fitness NYC,Boutique/Personal Training,New York,,,USA,+19176803097,,https://hansonfitness.com,4.8,150,,,
+GLOBAL,global,Harbor Fitness Brooklyn,Independent Gym,New York,,,USA,+17186727447,,https://harborfitness.com,4.5,110,,,
+GLOBAL,global,House of ALIO San Antonio,Boutique/Personal Training,Houston,,,USA,+12102014127,info@houseofalio.com,https://houseofalio.com,4.7,50,,,
+GLOBAL,global,Indoor Ascent Austin,Strength & Conditioning,Austin,,,USA,+15123821468,,https://indoorascent.com,4.8,95,,,
+GLOBAL,global,Iron Lion Fitness Denver,Independent Gym,Denver,,,USA,+17206442537,,https://ironlionfitness.com,4.6,50,,,
+GLOBAL,global,K2 CrossFit,CrossFit Box,Los Angeles,,,USA,+12133933282,,https://k2crossfit.com,4.7,60,,,
+GLOBAL,global,Kingsway Fitness Vancouver,Independent Gym,Vancouver,,,Canada,+16045595599,,https://kingswayfitness.com,4.6,55,,,
+GLOBAL,global,Le Club MMA Montreal,MMA/Combat Sports,Montreal,,,Canada,+15142870828,,https://leclubmma.com,4.8,90,,,
+GLOBAL,global,Leeds Barbell Club,Strength & Conditioning,Leeds,,,UK,+441134182233,,https://leedsbarbell.co.uk,4.8,55,,,
+GLOBAL,global,LegitFit NYC,Independent Gym,New York,,,USA,+17188802069,lifestyle@legitfitnyc.com,https://legitfitnyc.com,4.7,62,,,
+GLOBAL,global,Manly CrossFit Sydney,CrossFit Box,Sydney,,,Australia,+61299774520,,https://manlycrossfit.com.au,4.8,70,,,
+GLOBAL,global,Miami Combat Club,MMA/Combat Sports,Miami,,,USA,+13055701234,,https://miamicombatclub.com,4.8,60,,,
+GLOBAL,global,One Bell Fitness,Independent Gym,New York,,,USA,+17182222355,,https://onebellfitness.com,4.9,45,,,
+GLOBAL,global,Performix House,Independent Gym,New York,,,USA,+16466490034,,https://performixhouse.com,4.7,110,,,
+GLOBAL,global,Perth Strength Centre,Strength & Conditioning,Perth,,,Australia,+61892012233,,https://perthstrengthcentre.com.au,4.8,40,,,
+GLOBAL,global,Reebok CrossFit Melbourne,CrossFit Box,Melbourne,,,Australia,+61394171234,,https://crossfitmelbourne.com.au,4.7,95,,,
+GLOBAL,global,River Oaks Gym Houston,Boutique/Personal Training,Houston,,,USA,+17135284600,chad@riveroaksgym.com,https://riveroaksgym.com,4.8,75,,,
+GLOBAL,global,Rogue Fitness Leeds,Independent Gym,Leeds,,,UK,+441133220566,,https://roguefitnessleeds.com,4.6,45,,,
+GLOBAL,global,Rumble Boxing Chicago,MMA/Combat Sports,Chicago,,,USA,+13128182241,,https://rumbleboxinggym.com,4.6,95,,,
+GLOBAL,global,Rumble Boxing London,MMA/Combat Sports,London,,,UK,+442071833838,,https://rumbleboxinggym.com,4.6,110,,,
+GLOBAL,global,SOLO60 London,Independent Gym,London,,,UK,+442031414141,,https://solo60.com,4.7,55,,,
+GLOBAL,global,Seven Bell Fitness Brooklyn,Independent Gym,New York,,,USA,+13476892525,,https://sevenbellfitness.com,4.7,55,,,
+GLOBAL,global,South Melbourne Strength,Strength & Conditioning,Melbourne,,,Australia,+61396968844,,https://southmelbstrength.com.au,4.9,90,,,
+GLOBAL,global,SportsLab NYC,Strength & Conditioning,New York,,,USA,+19172612727,,https://sportslabnyc.com,4.8,88,,,
+GLOBAL,global,Station Seven Fitness Toronto,Independent Gym,Toronto,,,Canada,+14165161010,,https://stationsevenfitness.com,4.8,95,,,
+GLOBAL,global,Strength House Chicago,Strength & Conditioning,Chicago,,,USA,+13129297245,,https://strengthhousechicago.com,4.8,65,,,
+GLOBAL,global,Studio Fit Montreal,Boutique/Personal Training,Montreal,,,Canada,+15148441010,,https://studiofitmontreal.com,4.6,60,,,
+GLOBAL,global,Studio Three Miami,Boutique/Personal Training,Miami,,,USA,+13053503000,,https://studiothree.com,4.6,130,,,
+GLOBAL,global,TRAIN Manchester,CrossFit Box,Manchester,,,UK,+441614374001,,https://trainmanchester.co.uk,4.8,85,,,
+GLOBAL,global,The Training Lab NYC,Independent Gym,New York,,,USA,+12126958500,,https://thetraininglabnyc.com,4.7,95,,,
+GLOBAL,global,Tone House NYC,Strength & Conditioning,New York,,,USA,+16464535536,,https://tonehouse.com,4.8,220,,,
+GLOBAL,global,Toronto Strength Academy,Strength & Conditioning,Toronto,,,Canada,+14164691084,,https://torontostrengthacademy.com,4.9,85,,,
+GLOBAL,global,Train Dallas Fitness,Independent Gym,Dallas,,,USA,+12145550100,,https://traindallas.com,4.6,90,,,
+GLOBAL,global,Tribe Fitness Toronto,Boutique/Personal Training,Toronto,,,Canada,+14169019238,,https://tribefitnessto.com,4.6,65,,,
+GLOBAL,global,Warehouse Gym Dubai,Independent Gym,Dubai,,,UAE,+97143456789,,https://warehousegym.ae,4.8,150,,,
+GLOBAL,global,Wynwood Fitness Miami,Boutique/Personal Training,Miami,,,USA,+13055712828,,https://wynwoodfitness.com,4.7,80,,,
