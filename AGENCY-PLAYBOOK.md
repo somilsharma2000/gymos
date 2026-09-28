@@ -54,6 +54,29 @@ outreach (the 174 leads) — content compounds later. This playbook is built for
 - Content mix: industry insight (speed-to-lead, retention math) → product deep-dive → build-in-public (what we shipped/fixed, with real numbers).
 - End every post with one question. Comments > likes for reach.
 
+
+### Reddit (the research + trust channel) — active Sep 29 2026
+Reddit is where gym owners ask "what software should I use?" with zero sales pressure. Two uses:
+
+**A. Research (automated, live):** the RSS pipeline (`reddit.com/r/<sub>/search.rss`) feeds us
+thread discovery + the exact language gym owners use for their pain. That language goes
+straight into the hook bank and captions. Note: Reddit blocks datacenter IPs for browsing
+and throttles anonymous RSS — the research workflow runs paced (max 4 requests per run,
+20s apart, 3x weekly) to stay inside the throttle.
+
+**B. Trust (owner posts, agency drafts):** Reddit destroys brands that market naively.
+Rules of engagement:
+- 90/10: nine genuine value comments for every one that mentions Gym OS (and only when
+  the thread directly asks for software, always disclosed: "we build gym software, so take
+  this with that bias").
+- Answer operations questions like an expert, not a vendor. Profile bio discloses the brand.
+- Never link in first comment. Never the same comment twice (spam filters fingerprint).
+- Build-in-public posts ("I built a gym CRM — here's what gyms actually needed") do well
+  in r/SaaS and r/Entrepreneur with full disclosure. r/smallbusiness and r/sweatystartup:
+  advice-first.
+- Target subs: r/smallbusiness, r/Entrepreneur, r/sweatystartup, r/SaaS, r/gym, r/IndiaBusiness.
+- Owner time: 3-5 comments/week, 10 minutes, all drafted by the agency for review.
+
 ### LATER (parked, not now): YouTube Shorts (repurpose Reels), X (founder build-in-public), WhatsApp Community for gym owners (owned audience — high priority once we have 20+ engaged owners), Google Business Profile for the brand.
 
 ## 3. The zero-to-1000 doctrine (how brands actually grow from nothing)
