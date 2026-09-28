@@ -1,5 +1,9 @@
 # Gym OS — The Operating System for Indian Gyms
 
+> ⚠️ **SUPERSEDED REPO.** This was the first Gym OS rewrite and is no longer deployed.
+> Active repos: **gym-os-app** (live marketing site + console, Vercel) · **gym-os-v3** (live product) · **gym-os** (Pages mirror).
+> This repo now hosts the **[GO-LIVE-CHECKLIST](GO-LIVE-CHECKLIST.md)** — the tracked launch checklist.
+
 The complete Gym OS product: frontend + backend in **one website**.
 Product of **Beyond Pixells**.
 
