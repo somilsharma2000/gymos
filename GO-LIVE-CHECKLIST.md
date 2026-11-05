@@ -16,13 +16,13 @@ boxes automatically as each item lands.
 ## Live status
 
 <!-- status:start -->
-_Auto-updated by the go-live-watch workflow (every 6 h). Last check: **2026-11-05 03:03 UTC**_
+_Auto-updated by the go-live-watch workflow (every 6 h). Last check: **2026-11-05 15:03 UTC**_
 
 | Surface | State |
 |---|---|
 | Marketing app (gym-os-app.vercel.app) | **UP** |
 | Pages mirror (somilsharma2000.github.io/gym-os) | **UP** |
-| gymos.in DNS A | 88.223.87.212, 147.79.72.12 → still old host |
+| gymos.in DNS A | 147.79.72.75, 145.223.124.93 → still old host |
 | gymos.in traffic | old Hostinger site |
 | GA4 | not connected |
 | Testimonials | no quotes yet (renders only with real quotes) |
